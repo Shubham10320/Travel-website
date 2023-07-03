@@ -1,0 +1,27 @@
+
+#hero{
+    width:70%;
+    margin: auto;
+    display: block;
+    margin-top: 10%;
+    padding: 20px;
+   
+}
+#hero div{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    border: 1px solid red;
+    padding: 20px;
+}
+#hero div h1{
+    font-size: 70px;
+    color: white;
+}
+#hero div p{
+    width: 70%;
+    margin: auto;
+    color: white;
+    margin-top: 20px;
+    font-size: 17px;
+} 
