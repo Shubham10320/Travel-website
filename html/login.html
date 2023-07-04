@@ -2,13 +2,20 @@
 <html>
 <head>
   <title>Login Page</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
   <style>
-    .container {
+
+body {
+  background-image: url("background image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .form {
@@ -46,14 +53,23 @@ button:hover {
   </style>
 </head>
 <body>
-  <div class="container">
-    <form id="loginForm" class="form">
-      <h2>Login</h2>
-      <input type="text" placeholder="Username" id="loginUsername" required>
-      <input type="password" placeholder="Password" id="loginPassword" required>
-      <button type="submit">Login</button>
-    </form>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Login Page</title>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+      <div class="container">
+        <form id="loginForm" class="form">
+          <h2>Login</h2>
+          <input type="text" placeholder="Username" id="loginUsername" required>
+          <input type="password" placeholder="Password" id="loginPassword" required>
+          <button type="submit">Login</button>
+          <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </form>
+      </div>
+      <script src="login.js"></script>
+    </body>
+    </html>
+   
