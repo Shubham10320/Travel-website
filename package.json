@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Shubham10320/Travel-website/issues"
   },
-  "homepage": "https://github.com/Shubham10320/Travel-website#readme"
+  "homepage": "https://github.com/Shubham10320/Travel-website#readme",
+  "dependencies": {
+    "json-server": "^0.17.3"
+  },
+  "devDependencies": {}
 }
