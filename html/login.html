@@ -1,11 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Login & Sign Up Page</title>
+  <link rel="stylesheet" type="styles/css" href="login.css">
+
+  <style>
+    .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #614caf;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color:#614caf ;
+}
+
+  </style>
 </head>
 <body>
-    
+  <div class="container">
+    <form id="loginForm" class="form">
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" id="loginUsername" required>
+      <input type="password" placeholder="Password" id="loginPassword" required>
+      <button type="submit">Login</button>
+    </form>
+    <form id="signupForm" class="form">
+      <h2>Sign Up</h2>
+      <input type="text" placeholder="Username" id="signupUsername" required>
+      <input type="email" placeholder="Email" id="signupEmail" required>
+      <input type="password" placeholder="Password" id="signupPassword" required>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+  <script>
+
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var username = document.getElementById('loginUsername').value;
+  var password = document.getElementById('loginPassword').value;
+  // Perform login validation or send login request to the server
+  // Example: You can display a success message or redirect to another page
+  console.log('Login: Username - ' + username + ', Password - ' + password);
+  document.getElementById('loginForm').reset();
+});
+
+document.getElementById('signupForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var username = document.getElementById('signupUsername').value;
+  var email = document.getElementById('signupEmail').value;
+  var password = document.getElementById('signupPassword').value;
+  // Perform sign-up validation or send sign-up request to the server
+  // Example: You can display a success message or redirect to another page
+  console.log('Sign Up: Username - ' + username + ', Email - ' + email + ', Password - ' + password);
+  document.getElementById('signupForm').reset();
+});
+
+  </script>
 </body>
 </html>
