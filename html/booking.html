@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
-    <!-- <link rel="stylesheet" href="../styles/navbar.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/navbar.css">
     <!-- <link rel="stylesheet" href="../styles/index.css"> -->
     <link rel="stylesheet" href="../styles/booking.css">
 </head>
 
 <body>
-    <!-- <header></header>
-    <div id="menuBar"></div> -->
-    <div id="navbar"></div>
+    <header></header>
+    <div id="menuBar">
+        <!-- Importing navbar -->
+    </div>
     <div id="main-b">
         <div class="left-div">
             <div>
@@ -25,7 +27,7 @@
                     <img src="https://img.icons8.com/?size=27&id=88000&format=png">
                 </div>
                 <div class="content">
-                    
+
                 </div>
             </div>
             <div>
@@ -37,19 +39,31 @@
                     <img src="https://img.icons8.com/?size=27&id=88000&format=png">
                 </div>
                 <div class="content">
-                    
+
                 </div>
             </div>
             <div>
                 <div class="h2div">
-                    <img style="width: 1.8em;height: 1.8em;" src="https://img.icons8.com/?size=1x&id=3nOZtpH7KQrP&format=png">
+                    <img style="width: 2em;height: 1.9em;"
+                        src="https://img.icons8.com/?size=512&id=ZPLpfsKE1OLu&format=png">
                     <div>
                         <h2>Your Pincode and State</h2>
+                        <p>(Required for GST purpose on your tax invoice. You can edit this anytime later in your profile section. )</p>
                     </div>
                     <img src="https://img.icons8.com/?size=27&id=88000&format=png">
                 </div>
-                <div class="content">
-                    
+                <div class="content gst">
+                    <div>
+                        <input type="text">
+                        <input type="text">
+                        <select id="state-select">
+                            <option>--Select State--</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Confirm and save billing details to your profile</label>
+                    </div>
                 </div>
             </div>
             <div>
@@ -67,12 +81,15 @@
                             <h4>Worry free hotel stay!</h4>
                             <ul>
                                 <li><span class="dot"></span>24*7 emergency medical assistance</li>
-                                <li><span class="dot"></span>Upto ₹ 10K for hotel booking cancellation charges if cancelled due to illness</li>
+                                <li><span class="dot"></span>Upto ₹ 10K for hotel booking cancellation charges if
+                                    cancelled due to illness</li>
                                 <li><span class="dot"></span>Upto ₹ 20K for bounced booking</li>
                                 <li><span class="dot"></span>Upto ₹ 20K for loss of tablets and laptops</li>
                                 <li><span class="dot"></span>Upto ₹ 20K for loss of baggage</li>
-                                <li><span class="dot"></span>Upto ₹ 10K for cost of return travel in case of trip interruption</li>
-                                <li><span class="dot"></span>Upto ₹ 10K for hotel extension in case of hospitalization</li>
+                                <li><span class="dot"></span>Upto ₹ 10K for cost of return travel in case of trip
+                                    interruption</li>
+                                <li><span class="dot"></span>Upto ₹ 10K for hotel extension in case of hospitalization
+                                </li>
                             </ul>
                         </div>
                         <div>
@@ -92,7 +109,8 @@
                     </div>
                 </div>
             </div>
-            <button>Proceed to payment</h2></button>
+            <button class="btn btn-info btn-lg">Proceed to payment</button>
+            <sub>By proceeding, I agree to Alcazar's Privacy Policy, User Agreement & Terms of Service</sub>
         </div>
         <div class="right-div">
             <div>
@@ -105,7 +123,7 @@
                 </div>
 
                 <div class="content">
-                    
+
                 </div>
             </div>
             <div>
@@ -118,7 +136,7 @@
                 </div>
 
                 <div class="content">
-                    
+
                 </div>
             </div>
         </div>
@@ -127,11 +145,6 @@
 </body>
 
 </html>
-<script type="module">
-    //importing navbar component and setting it
-    // import {navbar, menuBar} from '../components/navbar.js'
 
-    // document.querySelector('header').innerHTML=navbar();
-    // document.getElementById('menuBar').innerHTML=menuBar();
-</script>
-<script src="../scripts/booking.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script type="module" src="../scripts/booking.js"></script>
