@@ -19,3 +19,5 @@ close.addEventListener('click', ()=>{
     close.style.display='none';
     document.getElementById('hero').style.filter= "blur(0)";
 })
+
+// localStorage.setItem("hotelid",8)

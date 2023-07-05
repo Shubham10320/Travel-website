@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content collapse show="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <title>Booking</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
     <link rel="stylesheet" href="../styles/navbar.css">
-    <!-- <link rel="stylesheet" href="../styles/index.css"> -->
     <link rel="stylesheet" href="../styles/booking.css">
 </head>
 
@@ -30,15 +30,51 @@
                 </div>
                 <div class="content collapse show">
                     <div class="hotel-info">
-                        <div>
-                            <img src="https://cdn1.goibibo.com/voy_mmt/t_srp/htl-imgs/200712031058215939-55838f3eb9be11e9ab220242ac110002.jpg"
-                                alt="">
+                        <div class='infoDiv'></div>
+                        <div class="check-in">
                             <div>
-                                <img src="https://img.icons8.com/?size=1x&id=qdQpy48X3Rjv&format=png" />
-                                <img src="https://img.icons8.com/?size=1x&id=qdQpy48X3Rjv&format=png" />
-                                <img src="https://img.icons8.com/?size=1x&id=qdQpy48X3Rjv&format=png" />
+                                <p>Check In</p>
+                                <input type="date" class="date-picker" id="checkindate">
+                                <p>12:00 PM</p>
                             </div>
-                            <h4>Bracknell Forest</h4>
+                            <div>
+                                <p>Rooms Choice</p>
+                                <select id="roomtype">
+                                    <option value="deluxe">Deluxe</option>
+                                    <option value="suite">Suite</option>
+                                </select>
+                            </div>
+                            <div id="guestDiv">
+                                <div>
+                                    <p>Guests</p>
+                                    <select id="numguest">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <!-- <option><input type="text"/></option> -->
+                                    </select>
+                                </div>
+                                <div>
+                                    <p>Rooms</p>
+                                    <select id="numroom">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Check Out</p>
+                                <input type="date" class="date-picker" id="checkoutfate">
+                                <p>11:00 AM</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -135,7 +171,7 @@
                             <div>
                                 <div>
                                     <p><b><span>&#8377</span>19</b> <span>per person</span></p>
-                                    <p><span style="color:orange">Non Refundable </span>| Includes GST</p>
+                                    <p><span style="color:#1ca0e3">Non Refundable </span>| Includes GST</p>
                                 </div>
                                 <div>
                                     <button>+ Add</button>
@@ -146,7 +182,7 @@
                 </div>
             </div>
             <button class="btn btn-info btn-lg">Proceed to payment</button>
-            <sub>By proceeding, I agree to Alcazar's Privacy Policy, User Agreement & Terms of Service</sub>
+            <sub style="margin-bottom: 10px;">By proceeding, I agree to Alcazar's Privacy Policy, User Agreement & Terms of Service</sub>
         </div>
         <div class="right-div">
             <div>
@@ -184,3 +220,5 @@
 </script>
 </html>
 <script type="module" src="../scripts/booking.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
