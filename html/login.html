@@ -2,9 +2,8 @@
 <html>
 <head>
   <title>Login Page</title>
-  <style>
-
-body {
+  <style src="../styles/login.css">
+    body {
   background-image: url("../images/background\ image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -67,6 +66,13 @@ button:hover {
           <input type="password" placeholder="Password" id="loginPassword" required>
           <button type="submit">Login</button>
           <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+
+          <div class="social-login">
+            <p>Login with:</p>
+            <a href="#"><i class="fab fa-google"></i> Google</a>
+            <a href="#"><i class="fab fa-apple"></i> Apple</a>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+          </div>
         </form>
       </div>
       <script src="../scripts/login.js"></script>
