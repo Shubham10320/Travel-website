@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Shubham10320/Travel-website#readme",
   "dependencies": {
+    "bootstrap-icons": "^1.10.5",
     "json-server": "^0.17.3"
-  },
-  "devDependencies": {}
+  }
 }
