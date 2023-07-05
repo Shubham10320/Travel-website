@@ -9,6 +9,8 @@ let m=document.getElementById('menu');
         menu.style.display='block'
         m.style.display='none';
         close.style.display='block'
+        document.querySelector('nav').style.zIndex='0'
+        document.querySelector('.container').style.filter="blur(180px)"
         document.getElementById('hero').style.filter= "blur(180px)";
 })
 let close=document.getElementById('close')
@@ -18,4 +20,5 @@ close.addEventListener('click', ()=>{
     m.style.display='block';
     close.style.display='none';
     document.getElementById('hero').style.filter= "blur(0)";
+    document.querySelector('.container').style.filter= "blur(0)";
 })

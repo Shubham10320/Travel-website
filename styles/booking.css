@@ -79,9 +79,6 @@ nav{
 #main-b>div>div>.h2div>div>h2 {
     font-size: 1.8rem;
 }
-#main-b>div>div>.h2div.active {
-    /* border-bottom: none; */
-}
 
 #main-b>div>div>.h2div>img:first-child {
     height: 2.2em;
