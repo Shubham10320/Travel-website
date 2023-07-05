@@ -56,14 +56,14 @@ nav{
     z-index: 2;
     padding: 1em 1.2em;
     cursor: pointer;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgb(205, 205, 205);
     display: flex;
     gap: 15px;
     align-items: center;
 }
 
 #main-b>div>div>.h2div.active {
-    border-bottom: none;
+    /* border-bottom: none; */
 }
 
 #main-b>div>div>.h2div>img:first-child {
@@ -73,6 +73,7 @@ nav{
 
 #main-b>div>div>.h2div>div>p {
     font-size: 0.95em;
+    margin: 0;
 }
 #main-b>div>div>.h2div>img:last-child {
     float: right;
@@ -98,7 +99,7 @@ nav{
 }
 
 #main-b>div>div>.content {
-    margin-top: 2em;
+    margin-top: 1em;
     padding: 0 1.5em;
     transition: 1s;
 }
@@ -107,11 +108,11 @@ nav{
     margin-bottom: 10px;
 }
 
-#main-b>div>div>.content.active {
+/* #main-b>div>div>.content.active {
     height: 0;
     margin-top: 0;
     transition: 0.5s;
-}
+} */
 
 #main-b>div>div>.insurance>div {
     display: flex;
@@ -183,17 +184,95 @@ nav{
     display: flex;
     justify-content: space-between;
 }
-#main-b>div>div>.gst{   }
-#main-b>div>div>.gst>div:first-child>input,select{
-    width: 29%;
+#main-b>div>div>.gst>div:last-child{
+    display: flex;
+    gap : 10px;
+    align-items: center;
+}
+#main-b>div>div>.gst>div:last-child>#check-gst+label{
+    font-size: 1rem;
+}
+#main-b>div>div>.gst>div:first-child>input,#main-b>div>div>.gst>div:first-child>select{
+    width: 32%;
     padding: 10px;
-    font-size: 16px;
+    font-size: 1rem;
     align-items: center;
 }
 
-/* state selecter */
+/* Guest Details */
+#main-b .guest{
+    margin-bottom: 1.5em;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: flex-start;
+    gap : 0.5rem
+}
+#main-b .guest>div{
+    display: flex;
+    justify-content: space-between;
+}
+#main-b .guest>.persons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+#main-b .guest>.persons>.person{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#main-b .guest>.persons>.person>div{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+#main-b .guest>.persons>.person>div:first-child{
+    width: 5rem;
+}
+#main-b .guest input{
+    padding: 5px;
+    font-size: 1rem;
+}
+#main-b .guest>.persons>.person>div>select{
+    padding: 7px;
+}
+#main-b .guest>#add-guest{
+    background-color: #1ca0e3;
+    color: white;
+    margin-bottom: 5px;
+}
+#main-b .guest>.email,#main-b .guest>.mobile{
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+}
+#main-b .guest>.mobile>div{
+    display: flex;
+}
+#main-b .guest>.mobile>div>div{
+    background-color: #1ca0e3;
+    color: white;
+    padding: 5px 10px;
+}
+#main-b .guest>.email>input,#main-b .guest>.mobile>div>input{
+    width: 15rem;
+}
+#main-b .guest>hr+div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    gap: 10px
+}
+#main-b .guest>hr+div>input{
+    transform: scale(1.3);
+}
 
-
+/* hotel info section */
+.hotel-info .checked {
+    color: orange;
+}
 
 /*submit button */
 #main-b>div>button {
@@ -217,21 +296,25 @@ nav{
 /* media queries mid screen */
 @media only screen and (max-width : 1150px) and (min-width: 801px) {
     #main-b {
-        padding: 2% 5%;
+        padding: 2% 2%;
     }
 
     #main-b>.left-div {
-        width: 55%;
+        width: 60%;
     }
 
     #main-b>.right-div {
-        right: 7%;
-        width: 35%;
+        right: 2.5%;
+        width: 40%;
     }
 
     #main-b>div>div>.insurance>div>div:last-child>div:last-child {
         flex-direction: column;
         align-items: flex-end;
+    }
+
+    #main-b .guest>.persons>.person>div:first-child{
+        width: 50%;
     }
 }
 
@@ -240,7 +323,7 @@ nav{
     #main-b {
         flex-direction: column;
         align-items: center;
-        padding: 10% 5%;
+        padding: 10% 0%;
     }
 
     #main-b>.left-div {
@@ -257,5 +340,9 @@ nav{
     #main-b>div>div>.insurance>div>div:last-child>div:last-child {
         flex-direction: column;
         align-items: flex-end;
+    }
+
+    #main-b .guest>.persons>.person>div:first-child{
+        width: 5rem;
     }
 }
