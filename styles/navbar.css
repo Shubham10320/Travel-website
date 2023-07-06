@@ -24,7 +24,7 @@ nav {
     top: 0;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #2f3f4bfe ;
+    background-color: #1ca0e3 ;
     height: 9vh;
     z-index: 2;
 }
@@ -48,8 +48,7 @@ nav div a {
 
 nav div a:hover {
     cursor: pointer;
-    color: rgb(29, 29, 194);
-    text-decoration: underline;
+    color: #2f3f4b9a;
 }
 
 nav>div img {
@@ -79,13 +78,12 @@ nav>#last {
 
 #last:hover {
     cursor: pointer;
-    color: rgb(29, 29, 194);
-    text-decoration: underline;
+    color: #2f3f4b9a;
 }
 
 #last a:hover {
     cursor: pointer;
-    color: rgb(29, 29, 194);
+    color: #2f3f4b9a;
 }
 
 nav div:last-child {
