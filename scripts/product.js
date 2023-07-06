@@ -430,3 +430,12 @@ document.getAnimations("fifth").addEventListener("click", () => {
 
 //       const searchButton = document.getElementById("searchButton");
 //       searchButton.a
+
+close.addEventListener('click', ()=>{
+    menu.style.display='none'
+    m.style.display='block';
+    close.style.display='none';
+    document.getElementById('hero').style.filter= "blur(0)";
+})
+
+// localStorage.setItem("hotelid",8)

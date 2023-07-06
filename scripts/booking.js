@@ -5,6 +5,24 @@ import {
 } from '../components/navbar.js'
 document.querySelector('header').innerHTML = navbar();
 document.getElementById('menuBar').innerHTML = menuBar();
+let menu=document.getElementById('menuBar');
+let m=document.getElementById('menu');
+    m.addEventListener('click', ()=>{
+        menu.style.display='block'
+        m.style.display='none';
+        close.style.display='block'
+        document.getElementById('main-b').style.opacity = "20%" ;
+        document.getElementById('main-b').style.pointerEvents = "none" ;
+})
+let close=document.getElementById('close')
+
+close.addEventListener('click', ()=>{
+    menu.style.display='none'
+    m.style.display='block';
+    close.style.display='none';
+    document.getElementById('main-b').style.opacity = "100%" ;
+        document.getElementById('main-b').style.pointerEvents = "initial" ;
+})
 // drop-down feature of divs
 document.querySelectorAll("#main-b .h2div").forEach((ele, idx) => {
     ele.setAttribute("data-toggle","collapse")
@@ -21,7 +39,7 @@ document.querySelectorAll("#main-b .h2div").forEach((ele, idx) => {
 //adding states to select options
 let setStates = async () => {
     try {
-        let response = await fetch("https://travel-website-v1.onrender.com/states")
+        let response = await fetch("https://database-sr9b.onrender.com/states")
         let data = await response.json()
         let select = document.querySelector("#state-select")
         data.forEach((state) => {
@@ -34,7 +52,7 @@ let setStates = async () => {
         console.log(e)
     }
 }
-// setStates()
+setStates()
 
 //billing address functionality
 
@@ -61,14 +79,56 @@ document.querySelector(".persons").innerHTML = peronDetail()
 document.querySelector("#add-guest").addEventListener("click",()=>{
     document.querySelector(".persons").innerHTML += peronDetail()
 })
-// let hotel = localStorage.getItem("hotel")
-// let fetchData = async() =>{
-//     try{
-//         let response = await fetch("https://api.opentripmap.com/0.1/en/places/radius?radius=5&lon=-73.75623&lat=42.65258&limit=10&apikey=5ae2e3f221c38a28845f05b6cbe2c29add1847ef8b17f26d5c29d6d5")
-//         let data = await response.json()
-//         console.log(data1)
-//     }catch(e){
-//         console.log(e)
-//     }
-// }
-// fetchData()
+
+
+
+//hotel info functionality
+let hotelid = localStorage.getItem("hotelid")
+let fetchData = async() =>{
+    try{
+        let response = await fetch(`https://database-sr9b.onrender.com/locations?id=${hotelid}`)
+        let data = await response.json()
+        setHotel(data)
+    }catch(e){
+        console.log(e)
+    }
+}
+fetchData()
+import hotelInfo from '../components/hotelinfo.js';
+let setHotel = (data) =>{
+    console.log(data)
+    // let div1 = document.createElement("div")
+    // div1.classList = "infoDiv"
+    // div1.innerHTML = 
+    // let subDiv1 = document.createElement
+    // let div2 = document.createElement("div")
+    // div2.classList = "checkin-div"
+    // let div3 = document.createElement("div")
+    // div3.classList = "info-div"
+    document.querySelector(".infoDiv").innerHTML = hotelInfo(data[0])
+    // document.querySelector(".hotel-info").append(div1,div2,div3)
+    setInterval(createCountdownTimer,1000)
+}
+//deal timer
+let createCountdownTimer = ()=> {
+    let now = new Date();
+    let targetDate;
+
+    if (now.getHours() < 12) {
+      targetDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0);
+    } else {
+      targetDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+    }
+  
+    let countdown = targetDate - now;
+  
+    let hours = Math.floor(countdown / (1000 * 60 * 60));
+    let minutes = Math.floor((countdown % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((countdown % (1000 * 60)) / 1000);
+    
+    let formattedHours = hours < 10 ? "0" + hours : hours;
+    let formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+    let formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+    
+    document.querySelector("#time").textContent = formattedHours + ":" + formattedMinutes + ":" + formattedSeconds;
+  }
