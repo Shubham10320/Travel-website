@@ -1,8 +1,8 @@
-import {navbar, menuBar} from '../components/navbar.js'
+import {navbar, menuBar, footer} from '../components/navbar.js'
 
 document.querySelector('header').innerHTML=navbar();
 document.getElementById('menuBar').innerHTML=menuBar();
-
+document.querySelector('footer').innerHTML=footer();
 let menu=document.getElementById('menuBar');
 let m=document.getElementById('menu');
     m.addEventListener('click', ()=>{
@@ -11,7 +11,7 @@ let m=document.getElementById('menu');
         close.style.display='block'
         document.querySelector('nav').style.zIndex='0'
         document.querySelector('.container').style.filter="blur(180px)"
-        document.getElementById('hero').style.filter= "blur(180px)";
+        document.querySelector('#hero').style.filter="blur(180px)"
 })
 let close=document.getElementById('close')
 

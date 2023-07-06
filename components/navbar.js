@@ -34,4 +34,37 @@ function menuBar(){
 </div>`
 }
 
-export {navbar, menuBar}
+function footer(){
+    return `<div class="foot">
+    <div class="f1">
+        <img src="../images/logo.png" alt="">
+        <p>Convenience is our priority to satisfy our customers, and we provide all the features you can easily and quickly.</p>
+    </div>
+    <div class="f2">
+        <div>
+            <h3>About</h3>
+            <p>How to Back</p>
+            <p>Contact Us</p>
+            <p>Help Center</p>
+        </div>
+        <div>
+            <h3>Products</h3>
+            <p>destination</p>
+            <p>Flight</p>
+            <p>Lodging</p>
+        </div>
+        <div>
+            <h3>Social</h3>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+    </div>
+</div>
+<hr class="lastHR">
+<div class="final">
+    <p>Privacy Policy</p>
+    <p>Copyright &#169;2023 Alcazar </p>
+</div>`
+}
+export {navbar, menuBar, footer}
