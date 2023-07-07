@@ -114,7 +114,7 @@ let setPriceSum = () => {
 }
 //hotel info functionality
 window.onload = () => {
-    let hotelid = localStorage.getItem("hotelid")
+    let hotelid = localStorage.getItem("hotel-book")
     let fetchData = async () => {
         try {
             let response = await fetch(`https://database-sr9b.onrender.com/hotels?id=${hotelid}`)
@@ -263,4 +263,7 @@ document.querySelector("#checkoutdate").addEventListener("change",(e)=>{
             setPriceSum()
         }
     }
+})
+document.querySelector("#goToPay").addEventListener("click",()=>{
+    localStorage.setItem("finalPrice",document.querySelector(""))
 })
