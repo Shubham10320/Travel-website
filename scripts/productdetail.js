@@ -78,14 +78,17 @@ function cool_fun(arr) {
     document.getElementById("images").append(d3, d4);
 
     let p6 = document.createElement("p");
-    p6.textContent = ele.description1;
+    p6.textContent = ele.description1.slice(0,1000);
     document.getElementById("discription").append(p6);
 
     // ========================proceed to payment ===========================
-    let pay_btn = document.getElementById('a');
+    let pay_btn = document.createElement('button');
+    pay_btn.textContent = 'BOOK NOW';
+    pay_btn.classList = 'pg'
     pay_btn.addEventListener('click',()=>{
       navTobooking(ele);
     })
+    document.getElementById("payment").append(pay_btn);
   });
 }
 
@@ -93,4 +96,5 @@ function navTobooking(hotel){
   let newarr = []
   newarr.push(hotel);
   localStorage.setItem('hotel-book',JSON.stringify(newarr));
+  location.href = "booking.html"
 }
