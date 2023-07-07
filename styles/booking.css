@@ -108,8 +108,10 @@ nav{
 
 #main-b>.right-div {
     width: 27%;
-    position: fixed;
-    right: 11%
+    right: 11%;
+    position: absolute;
+    transition: 0.5s;
+    /* top: 6em */
 }
 
 #main-b>div>div>.content {
@@ -386,7 +388,7 @@ nav{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #bbe8ff;
+    background: linear-gradient(#bbe8ff,white,#bbe8ff)
 }
 .hotel-info>.check-in>div{
     text-align: center;
@@ -411,7 +413,6 @@ nav{
     justify-content: flex-end;
     flex-direction: row;
 }
-
 /*submit button */
 #main-b>div>button {
     width: 70%;
@@ -419,8 +420,88 @@ nav{
     background-color: #1ca0e3;
     font-weight: 600;
 }
+/* right div */
+.right-div .offerDiv>div{
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 1em;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.right-div .offerDiv>div.active{
+    background-color: #bbe8ff;
+    /* color: white; */
+    border-radius: 10px;
+    
+}
+.right-div .offerDiv>div>input{
+    margin-top: 1em;
+    width: 1rem;
+    /* accent-color: #bbe8ff;
+    outline: #1ca0e3; */
+    transition: 0.5s;
+}
+.right-div .offerDiv>div>div{
+    width: 95%;
+}
+.right-div .offerDiv>div>div>div{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.right-div .offerDiv>div>div>div>div{
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 2px 5px;
+}
 
+/* price summary */
+#priceSumDiv>div{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    gap: 1em
+}
+#priceSumDiv{
+    gap:0.3em;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
 
+}
+#priceSumDiv>#applied{
+    justify-content: flex-start;
+    gap: 5px;
+    /* border: 1px solid black; */
+    padding: 0;
+    width: 10rem;
+    color: green;
+    font-weight: 600;
+    align-items: center;
+}
+#priceSumDiv>#applied::before{
+    /* align-self: center; */
+    margin-top: 0.5rem;
+    content: url("https://img.icons8.com/?size=20&id=70yRC8npwT3d&format=png");
+}
+#priceSumDiv>hr{
+    margin: 0;
+}
+#priceSumDiv h4{
+    font-weight: 600;
+    font-size: 1.4em;
+}
+#priceSumDiv .roomstr{
+    font-size: 0.9rem;
+}
+#disc{
+    background-color: #44c1ff;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
 
 
 
@@ -477,7 +558,7 @@ nav{
 }
 
 /* media queries small screen */
-@media screen and (max-width : 800px) {
+@media screen and (max-width : 800px) and (min-width: 420px){
     nav #menu{
         margin: 0.7em;
     }
@@ -517,14 +598,68 @@ nav{
         height: 90%;
     }
     .hotel-info>.check-in{
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
     }
     .hotel-info .hdeal{
         padding-right: 0;
     }
     .hotel-info .hdeal>div{
         display: none;
+    }
+}
+@media screen and (max-width:420px){
+    nav #menu{
+        margin: 0.7em;
+    }
+    #menuBar #close>ion-icon{
+        margin-top: 1.1em;
+    }
+    #main-b {
+        flex-direction: column;
+        align-items: center;
+        padding: 10% 0%;
+        margin-top: 2em;
+    }
+
+    #main-b>.left-div {
+        width: 90%;
+    }
+
+    #main-b>.right-div {
+        position:relative;
+        right: auto;
+        width: 90%;
+        margin-top: 3%;
+    }
+
+    #main-b>div>div>.insurance>div>div:last-child>div:last-child {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    #main-b .guest>.persons>.person>div:first-child{
+        width: 5rem;
+    }
+    .hotel-info>.infoDiv{
+        height: 11em;
+    }
+    .hotel-info>.infoDiv>.himgDiv{
+        width: 40%;
+    }
+    .hotel-info>.infoDiv>.himgDiv>img{
+        height: 90%;
+    }
+    .hotel-info .hdeal{
+        padding-right: 0;
+    }
+    .hotel-info .hdeal>div{
+        display: none;
+    }
+    .hotel-info>.check-in{
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
     }
 }
