@@ -114,7 +114,9 @@ let setPriceSum = () => {
 }
 //hotel info functionality
 window.onload = () => {
-    let hotelid = localStorage.getItem("hotel-book")
+    let hotelid = JSON.parse(localStorage.getItem("hotel-book"))
+    console.log(hotelid)
+    hotelid = hotelid[0].id
     let fetchData = async () => {
         try {
             let response = await fetch(`https://database-sr9b.onrender.com/hotels?id=${hotelid}`)
@@ -203,14 +205,14 @@ window.onscroll = () => {
         let viewPortHeight = window.innerHeight
         let rcontentHeight = rightBar.getBoundingClientRect().height
         let lcontentHeight = leftBar.getBoundingClientRect().height
-        console.log(viewPortHeight,rcontentHeight,lcontentHeight,scrollTop)
-        if (scrollTop <= rcontentHeight) {
+        // console.log(viewPortHeight,rcontentHeight,lcontentHeight,scrollTop)
+        if (scrollTop >= viewPortHeight) {
+            console.log("here")
             rightBar.style.position = "fixed"
-            rightBar.style.transform = ``
+            rightBar.style.transform = `translateY(-40em)`
             // console.log("here")
         } else {
-            rightBar.style.position = "absolute"
-            rightBar.style.transform = `translateY(${rcontentHeight-viewPortHeight}px)`
+            rightBar.style.transform = ``
             // console.log("here2")
         }
         // console.log("here3")
@@ -265,5 +267,8 @@ document.querySelector("#checkoutdate").addEventListener("change",(e)=>{
     }
 })
 document.querySelector("#goToPay").addEventListener("click",()=>{
-    localStorage.setItem("finalPrice",document.querySelector(""))
+    localStorage.setItem("finalPrice",)
+})
+document.querySelector("#indexA").addEventListener("click",()=>{
+    window.location.href = "index.html"
 })
