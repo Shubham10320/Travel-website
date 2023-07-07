@@ -18,9 +18,9 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+/* input[type=number] {
   -moz-appearance: textfield;
-}
+} */
 
 /* navbar */
 nav{
@@ -110,7 +110,7 @@ nav{
 #main-b>.right-div {
     width: 27%;
     right: 11%;
-    position: absolute;
+    position: fixed;
     transition: 0.5s;
     /* top: 6em */
 }
