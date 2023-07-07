@@ -3,6 +3,9 @@ import { navbar, menuBar } from "../components/navbar.js";
 document.querySelector("header").innerHTML = navbar();
 document.getElementById("menuBar").innerHTML = menuBar();
 
+
+
+
 let menu = document.getElementById("menuBar");
 let m = document.getElementById("menu");
 m.addEventListener("click", () => {
@@ -35,7 +38,7 @@ async function gettingPageNumber() {
 gettingPageNumber();
 
 let page = 1;
-let query = ""
+let query='';
 let fetchingData = async (page) => {
   try {
     console.log(`https://database-sr9b.onrender.com/hotels?_limit=6&_page=${page}&${query}`)
@@ -48,7 +51,7 @@ let fetchingData = async (page) => {
     console.log(error);
   }
 };
-fetchingData(page);
+// fetchingData(page);
 
 function creatingButton(totalPages) {
   document.getElementById("page-list").innerHTML = "";
@@ -114,10 +117,10 @@ const searchfun = () => {
   // localStorage.setItem("value",JSON.stringify(searchData))
   searchdata(searchData1);
 };
-document.getElementById("searchButton").addEventListener("click", searchfun);
-const searchdata = async (Country) => {
+// document.getElementById("searchButton").addEventListener("click", searchfun);
+let searchdata = async (searchedData) => {
   try {
-    let link = `https://database-sr9b.onrender.com/hotels?Country=${Country}`;
+    let link = `https://database-sr9b.onrender.com/hotels?Country=${searchedData}`;
     let data = await fetch(link);
     data = await data.json();
     totalPages = data.length / 6;
@@ -127,6 +130,17 @@ const searchdata = async (Country) => {
     console.log(err);
   }
 };
+// let searchedData=JSON.parse(localStorage.getItem('searchData')) || '';
+let searchedData
+if(JSON.parse(localStorage.getItem('searchData'))){
+  searchedData=JSON.parse(localStorage.getItem('searchData'))
+  console.log(searchedData)
+   searchdata(searchedData)
+}else{
+    fetchingData(page);
+    gettingPageNumber();
+}
+
 
 document.getElementById("first").addEventListener("click", () => {
   gettingPageNumber();

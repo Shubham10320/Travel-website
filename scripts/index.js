@@ -22,3 +22,8 @@ close.addEventListener('click', ()=>{
     document.getElementById('hero').style.filter= "blur(0)";
     document.querySelector('.container').style.filter= "blur(0)";
 })
+document.getElementById('searchThat').addEventListener('click',()=>{
+    let inputVal=document.getElementById('input').value 
+    localStorage.setItem('searchData', JSON.stringify(inputVal));
+    location.href='product.html'
+})
