@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/background\ image.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity by modifying the alpha value (0.8 in this case) */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  margin-top: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 96%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #1466b3;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0e51b4;
+}
+
+#zip{
+display: flex;
+margin-top: 20px;
+  justify-content: space-between;
+}
+#zip select{
+padding: 0.5rem 0.7rem;
+}
+#zip input[type="number"]{
+padding: 0.5rem 0.7rem;
+margin-left: 15px;	
+}

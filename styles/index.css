@@ -13,7 +13,7 @@ body {
     width: 70%;
     margin: auto;
     display: block;
-    margin-top: 10%;
+    margin-top: 1%;
     padding: 20px;
 
 }
@@ -391,7 +391,7 @@ body {
     width: 170px;
 }
 
-footer{
+/* footer{
   width: 100%;
   background-color: #1ca0e3;
   display: flex;
@@ -437,7 +437,7 @@ footer{
   margin: auto;
   justify-content: space-between;
   padding-bottom: 20px;
-}
+} */
 
 
 @media screen and (min-width:767px) and (max-width:1024px) {
@@ -445,7 +445,7 @@ footer{
         width: 90%;
         margin: auto;
         display: block;
-        margin-top: 13%;
+        margin-top: 7%;
         padding: 20px;
 
     }
@@ -553,7 +553,7 @@ footer{
         justify-content: space-evenly;
     } */
     .mainSection{
-        margin-top: 180px;
+        margin-top: 80px;
     }
     .mainSection .hotelSection{
         width: 90%;
@@ -644,7 +644,7 @@ footer{
         width: 80%;
         margin: auto;
         display: block;
-        margin-top: 18%;
+        margin-top: 5%;
         padding: 20px;
 
     }
@@ -715,7 +715,7 @@ footer{
         font-size: 8px;
     }
     .mainSection{
-        margin-top: 30px;
+        margin-top: -70px;
     }
     .mainSection .textSection{
         width: 90%;
@@ -854,7 +854,7 @@ footer{
         width: 140px;
         margin: auto;
     }
-    footer{
+    /* footer{
       width: 100%;
       background-color: #1ca0e3;
       display: flex;
@@ -918,5 +918,5 @@ footer{
       justify-content: space-between;
       padding-bottom: 20px;
       font-size: 22px;
-    }
+    } */
 }
