@@ -82,13 +82,10 @@ function cool_fun(arr) {
     document.getElementById("discription").append(p6);
 
     // ========================proceed to payment ===========================
-    let pay_btn = document.createElement("button");
-    pay_btn.textContent = 'Book Now';
-    pay_btn.id = 'pay_btn';
+    let pay_btn = document.getElementById('a');
     pay_btn.addEventListener('click',()=>{
       navTobooking(ele);
     })
-    document.getElementById('payment').append(pay_btn);
   });
 }
 
@@ -96,5 +93,4 @@ function navTobooking(hotel){
   let newarr = []
   newarr.push(hotel);
   localStorage.setItem('hotel-book',JSON.stringify(newarr));
-  window.location.href = 'booking.html'
 }
