@@ -13,7 +13,7 @@ body {
     width: 70%;
     margin: auto;
     display: block;
-    margin-top: 10%;
+    margin-top: 1%;
     padding: 20px;
 
 }
@@ -445,7 +445,7 @@ body {
         width: 90%;
         margin: auto;
         display: block;
-        margin-top: 13%;
+        margin-top: 7%;
         padding: 20px;
 
     }
@@ -553,7 +553,7 @@ body {
         justify-content: space-evenly;
     } */
     .mainSection{
-        margin-top: 180px;
+        margin-top: 80px;
     }
     .mainSection .hotelSection{
         width: 90%;
@@ -644,7 +644,7 @@ body {
         width: 80%;
         margin: auto;
         display: block;
-        margin-top: 18%;
+        margin-top: 5%;
         padding: 20px;
 
     }
@@ -715,7 +715,7 @@ body {
         font-size: 8px;
     }
     .mainSection{
-        margin-top: 30px;
+        margin-top: -70px;
     }
     .mainSection .textSection{
         width: 90%;
