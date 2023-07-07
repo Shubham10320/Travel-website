@@ -1,3 +1,29 @@
+import {navbar, menuBar, footer} from '../components/navbar.js'
+
+document.querySelector('header').innerHTML=navbar();
+document.getElementById('menuBar').innerHTML=menuBar();
+document.querySelector('footer').innerHTML=footer();
+let menu=document.getElementById('menuBar');
+let m=document.getElementById('menu');
+    m.addEventListener('click', ()=>{
+        menu.style.display='block'
+        m.style.display='none';
+        close.style.display='block'
+        document.querySelector('nav').style.zIndex='0'
+        document.querySelector('.container').style.filter="blur(180px)"
+        document.querySelector('#hero').style.filter="blur(180px)"
+})
+let close=document.getElementById('close')
+
+close.addEventListener('click', ()=>{
+    menu.style.display='none'
+    m.style.display='block';
+    close.style.display='none';
+    document.getElementById('hero').style.filter= "blur(0)";
+    document.querySelector('.container').style.filter= "blur(0)";
+})
+
+
 let z = JSON.parse(localStorage.getItem("id"));
 
 let arr = [];
@@ -56,25 +82,19 @@ function cool_fun(arr) {
     document.getElementById("discription").append(p6);
 
     // ========================proceed to payment ===========================
-
-    let p = document.createElement("p");
-    p.style.fontWeight = "600";
-    p.textContent = "₹ " + ele.cost;
-    let span4 = document.createElement("span");
-    span4.style.fontSize = "10px";
-    span4.textContent = " night";
-    p.appendChild(span4);
-
-    let i4 = document.createElement("i");
-    i4.className = "fa-solid fa-star";
-    let span5 = document.createElement("span");
-    span5.textContent = " 4.92";
-    let a = document.createElement("a");
-    a.textContent = " . 597 reviews";
-    a.href = "#";
-    span5.appendChild(a);
-    i4.appe / ndChild(span5);
-
-    document.getElementById("right_title").append(p, i4);
+    let pay_btn = document.createElement("button");
+    pay_btn.textContent = 'Book Now';
+    pay_btn.id = 'pay_btn';
+    pay_btn.addEventListener('click',()=>{
+      navTobooking(ele);
+    })
+    document.getElementById('payment').append(pay_btn);
   });
+}
+
+function navTobooking(hotel){
+  let newarr = []
+  newarr.push(hotel);
+  localStorage.setItem('hotel-book',JSON.stringify(newarr));
+  window.location.href = 'booking.html'
 }

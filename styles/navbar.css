@@ -19,7 +19,7 @@ header {
 
 nav {
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
     display: flex;
     top: 0;
     justify-content: space-evenly;
