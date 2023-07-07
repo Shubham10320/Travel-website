@@ -57,6 +57,7 @@ button:hover {
     <head>
       <title>Login Page</title>
       <link rel="stylesheet" type="text/css" href="styles.css">
+      <script src="https://accounts.google.com/gsi/client" async defer></script>
     </head>
     <body>
       <div class="container">
@@ -69,6 +70,7 @@ button:hover {
 
           <div class="social-login">
             <p>Login with:</p>
+            <div id="gSignIn" class="g-signin2" data-onsuccess="onGoogleSignIn"></div>
             <a href="#"><i class="fab fa-google"></i> Google</a>
             <a href="#"><i class="fab fa-apple"></i> Apple</a>
             <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
