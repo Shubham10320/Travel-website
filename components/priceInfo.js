@@ -13,6 +13,7 @@ let priceInfo = (data) => {
     let tax = Math.round(0.15 * pad)
     let payable = pad - tax
     basePrice = "₹"+basePrice
+    localStorage.setItem("payable",payable)
     console.log(extra)
     if(extra!=0){
         extra = "<div>Insurance opt-in</div> &#8377 "+(19*person)
