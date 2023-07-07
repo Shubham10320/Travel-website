@@ -6,193 +6,40 @@
     <title>Hotel - details</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/productdetail.css">
+
   </head>
-  <style>
-    #container {
-      width: 80%;
-      margin: auto;
-      
-    }
-    #headline {
-      font-size: 30px;
-      font-weight: 600;
-      margin-bottom: 0px;
-      text-decoration: none;
-    }
-    #subtitle{
-        display: flex;
-        flex-direction: column;
-
-    }
-    #title p {
-      margin-left: 5px;
-    }
-    #title p {
-      text-decoration: none;
-      color: black;
-      text-decoration-line: underline;
-      margin-left: 20px;
-      margin-right: 50vh;
-    }
-    #images {
-      display: flex;
-      margin: auto;
-      padding: 10px;
-      overflow: hidden;
-      max-width: 130vh;
-      max-height: 47vh;
-    }
-    #images .first {
-      /* background-color: yellow; */
-      display: flex;
-    }
-    #images .first img {
-      border-radius: 20px 0 0 20px;
-      width: 100%;
-    }
-    #images .second {
-      /* background-color: yellow; */
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-left: 10px;
-    }
-    #images .second img {
-      width: 100%;
-      margin: auto;
-    }
-    #images div img:hover {
-      opacity: 70%;
-      cursor: pointer;
-      transition: 500ms;
-    }
-
-    #discription {
-      width: 63%;
-      margin: auto;
-      text-align: left;
-    }
-    #discription p:first-child::first-letter {
-      color: #209ee3;
-      font-weight: bold;
-      font-size: 100px;
-      float: left;
-      /* line-height: 8px; */
-      padding-right: 8px;
-      margin-top: -3px;
-    }
-
-    nav {
-      background-color: red;
-      background: url(background\ image.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("./background\ image.jpg");
-    }
-
-    /* ========================= Media Query ====================== */
-
-    @media (max-width: 1150px) {
-      #container {
-        width: 100%;
-        margin: auto;
-      }
-      #title i {
-        margin-right: 0%;
-      }
-      #title .share {
-        margin: auto;
-        padding: 10px 15px 10px 15px;
-      }
-    }
-    @media (max-width: 470px) {
-      #container {
-        width: 60vh;
-        margin: auto;
-        /* background-color: yellow; */
-      }
-      #title p {
-        font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 0px;
-      }
-      #title i {
-        margin-right: 0px;
-        /* background-color: yellow; */
-        font-size: 11px;
-      }
-      #title p {
-        text-decoration: none;
-        color: black;
-        text-decoration-line: underline;
-        margin-left: 5px;
-        margin-right: 0vh;
-      }
-      #title .share {
-        margin: auto;
-        /* background-color: blue; */
-        padding: 5px 10px 5px 10px;
-      }
-      #images {
-        display: block;
-        width: 60vh;
-        margin: auto;
-        padding: 10px;
-        max-width: 200vh;
-        max-height: 100vh;
-      }
-      #images .first {
-        /* background-color: yellow; */
-        display: flex;
-      }
-      #images .first img {
-        border-radius: 0px;
-        /* width: 70%; */
-        margin: auto;
-        margin-bottom: 10px;
-      }
-      #images .second {
-        /* background-color: yellow; */
-        overflow: hidden;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        margin-left: 0px;
-      }
-      #images .second img {
-        margin: auto;
-        /* width: 70%; */
-      }
-      #images div img:hover {
-        opacity: 70%;
-        cursor: pointer;
-        transition: 500ms;
-      }
-
-      #discription {
-        width: 60vh;
-        margin: auto;
-        text-align: left;
-        margin-left: 10px;
-      }
-    }
-  </style>
   <body>
-    <div id="container">
-      <div id="title">
-        <!-- data appended from js -->
-      </div>
-      <div id="images">
-        <!-- data appended from js -->
-      </div>
-      <div id="discription">
-        <!-- data appended from js -->
-      </div>
+    <header>
+
+    </header>
+    <div id="menuBar">
+        <!-- data appended from navbar.js -->
     </div>
+    <div id="back-ground">
+      <div id="container">
+        <div id="title">
+          <!-- data appended from js -->
+        </div>
+        <div id="images">
+          <!-- data appended from js -->
+        </div>
+        <div id="discription">
+          <!-- data appended from js -->
+        </div>
+        <div id="payment">
+          <!-- button appended from js -->
+        </div>
+      </div>
+
+    </div>
+    <footer>
+
+    </footer>
   </body>
 </html>
+<script type="module" src="../components/navbar.js"></script>
 <script type="module" src="../scripts/productdetail.js"></script>
 <script
   src="https://kit.fontawesome.com/b90a60688f.js"
