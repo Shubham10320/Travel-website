@@ -1,0 +1,118 @@
+footer{
+    width: 100%;
+    background-color: #1ca0e3;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    color: white;
+  }
+  .foot{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+  }
+  .foot>.f1 img{
+    width: 180px;
+    display: block;
+    height: 20vh;
+  }
+  .foot>.f1 p{
+    width: 40%;
+    margin-bottom: 30px;
+    margin-left: 20px;
+  }
+  .foot>.f2{
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+  }
+  .f2{
+    margin-top: 60px;
+  }
+  .foot>.f2 div p{
+    margin-top: 8px;
+  }
+  .lastHR{
+    width: 90%;
+    margin: auto;
+    border: 2px solid #1484bc;
+  }
+  .final{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  @media screen and (min-width:767px) and (max-width:1024px){
+
+  }
+  @media screen and (min-width:200px) and (max-width:766px) {
+    footer{
+        width: 100%;
+        background-color: #1ca0e3;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        color: white;
+      }
+      .foot{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 50px;
+        font-size: 22px;
+      }
+      .foot>.f1 img{
+        width: 280px;
+        display: block;
+        height: 15vh;
+        margin: auto;
+        margin-left: 28px;
+      }
+      .foot>.f1 p{
+        width: 65%;
+        margin-bottom: 30px;
+        margin-left: 60px;
+        margin: auto;
+        font-size: 20px;
+        line-height: 1.3;
+      }
+      .foot>.f2{
+        width:90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       text-align: center;
+        margin-top: 40px;
+      }
+      .f2 div{
+        margin-top: 50px;
+      }
+      .f2 div h2{
+        font-size: 40px;
+      }
+      .f2{
+        margin-top: 60px;
+        font-size: 22px;
+      }
+      .foot>.f2 div p{
+        margin-top: 10px;
+      }
+      .lastHR{
+        width: 90%;
+        margin: auto;
+        border: 2px solid #1484bc;
+      }
+      .final{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        font-size: 22px;
+      }
+  }
