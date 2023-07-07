@@ -120,10 +120,12 @@ const searchfun = () => {
 // document.getElementById("searchButton").addEventListener("click", searchfun);
 let searchdata = async (searchedData) => {
   try {
-    let link = `https://database-sr9b.onrender.com/hotels?Country=${searchedData}`;
-    let data = await fetch(link);
-    data = await data.json();
+    let link = `https://database-sr9b.onrender.com/hotels?Country_like=${searchedData}`;
+    let response = await fetch(link);
+    let data = await response.json();
+    console.log(response)
     totalPages = data.length / 6;
+    console.log(data)
     displayData(data);
     creatingButton(totalPages);
   } catch (err) {
@@ -131,9 +133,9 @@ let searchdata = async (searchedData) => {
   }
 };
 // let searchedData=JSON.parse(localStorage.getItem('searchData')) || '';
-let searchedData
-if(JSON.parse(localStorage.getItem('searchData'))){
-  searchedData=JSON.parse(localStorage.getItem('searchData'))
+let searchedData = JSON.parse(localStorage.getItem('searchData'))
+if(searchedData!==""){
+  searchedData = searchedData.trim()
   console.log(searchedData)
    searchdata(searchedData)
 }else{
@@ -169,3 +171,6 @@ document.getElementById("six").addEventListener("click", () => {
   query = "_sort=cost&_order=asc"
   fetchingData(page)
 });
+document.querySelector("#indexA").addEventListener("click",()=>{
+  window.location.href = "index.html"
+})
