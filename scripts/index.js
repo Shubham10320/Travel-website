@@ -19,6 +19,7 @@ close.addEventListener('click', ()=>{
     menu.style.display='none'
     m.style.display='block';
     close.style.display='none';
+    document.querySelector('nav').style.zIndex='2'
     document.getElementById('hero').style.filter= "blur(0)";
     document.querySelector('.container').style.filter= "blur(0)";
 })
@@ -27,3 +28,5 @@ document.getElementById('searchThat').addEventListener('click',()=>{
     localStorage.setItem('searchData', JSON.stringify(inputVal));
     location.href='product.html'
 })
+
+
