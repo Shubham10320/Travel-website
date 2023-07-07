@@ -72,7 +72,7 @@
                             </div>
                             <div>
                                 <p>Check Out</p>
-                                <input type="date" class="date-picker" id="checkoutfate">
+                                <input type="date" class="date-picker" id="checkoutdate">
                                 <p>11:00 AM</p>
                             </div>
                         </div>
@@ -174,7 +174,7 @@
                                     <p><span style="color:#1ca0e3">Non Refundable </span>| Includes GST</p>
                                 </div>
                                 <div>
-                                    <button>+ Add</button>
+                                    <button id="addins">+ Add</button>
                                 </div>
                             </div>
                         </div>
@@ -195,7 +195,9 @@
                 </div>
 
                 <div class="content collapse show">
+                    <div id="priceSumDiv">
 
+                    </div>
                 </div>
             </div>
             <div>
@@ -208,7 +210,29 @@
                 </div>
 
                 <div class="content collapse show">
-
+                    <div class="offerDiv">
+                        <div class="active">
+                            <input name="offer-type" class="form-check-input" id="radio-offer" type="radio" value="First Hotel" checked disc="35">
+                            <div>
+                                <div>First Hotel <div>- &#8377 <span id="discount1">817</span></div></div>
+                                <p>Apply to avail this EXCLUSIVE offer on your first hotel booking! <a href="#" style="text-decoration: none;">T&C Apply</a></p>
+                            </div>
+                        </div>
+                        <div>
+                            <input name="offer-type" class="form-check-input" id="radio-offer" type="radio" value="Alcaza-day" disc="30">
+                            <div>
+                                <div>Alcaza-day<div>- &#8377 <span id="discount2">817</span></div></div>
+                                <p>Also enjoy FREE Swiggy coupon of FLAT Rs. 125 OFF* upon Check In  <a href="#" style="text-decoration: none;">T&C Apply</a></p>
+                            </div>
+                        </div>
+                        <div>
+                            <input name="offer-type" class="form-check-input" id="radio-offer" type="radio" value="Tha-Alcaza" disc="25">
+                            <div>
+                                <div>Tha-Alcaza<div>- &#8377 <span id="discount3">817</span></div></div>
+                                <p>Use Tha-Alcaza to get instant discount on this hotel booking celebrating Thalaiva's latest hit <a href="#" style="text-decoration: none;">T&C Apply</a></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

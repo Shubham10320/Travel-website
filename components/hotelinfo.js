@@ -1,6 +1,6 @@
 let hotelInfo = (data) =>{
-    let {id,Country,name,url,cost,guestDetails} = data 
-    let stars = Math.round(Math.random()*3)+2
+    let {id,Country,name,url,cost,guestDetails,ratings} = data 
+    let stars = ratings
     let code = ""
     for(let x=0; x<stars; x++){
         code+='<ion-icon name="star"></ion-icon>'
