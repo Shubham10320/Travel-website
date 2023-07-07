@@ -505,7 +505,36 @@ nav{
 }
 
 
-
+.lds-dual-ring {
+    position: fixed;
+    top: 37%;
+    left: 45%;
+    display: inline-block;
+    /* backdrop-filter: blur(1px); */
+    /* z-index: 5; */
+    /* background-color: red; */
+    width: 10em;
+    height: 10em;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 10em;
+    height: 10em;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #288de0;
+    border-color: #288de0 transparent #288de0 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
 
 
