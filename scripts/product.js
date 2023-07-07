@@ -35,11 +35,12 @@ async function gettingPageNumber() {
 gettingPageNumber();
 
 let page = 1;
-
+let query = ""
 let fetchingData = async (page) => {
   try {
+    console.log(`https://database-sr9b.onrender.com/hotels?_limit=6&_page=${page}&${query}`)
     let result = await fetch(
-      `https://database-sr9b.onrender.com/hotels?_limit=6&_page=${page}`
+      `https://database-sr9b.onrender.com/hotels?_limit=6&_page=${page}&${query}`
     );
     let res = await result.json();
     displayData(res);
@@ -59,6 +60,9 @@ function creatingButton(totalPages) {
     console.log("btn" + i);
     btn.addEventListener("click", () => {
       fetchingData(btn.textContent);
+      document.querySelectorAll(".pg").forEach((ele)=>{
+        ele.style.backgroundColor = "#fff"
+      })
       btn.style.backgroundColor = "rgb(19, 158, 212)";
     });
     document.getElementById("page-list").append(btn);
@@ -87,7 +91,7 @@ function displayData(data) {
     name.textContent = elem.name;
 
     var price = document.createElement("h3");
-    price.textContent = "₹" + elem.cost + "/Night";
+    price.textContent = "₹" + Math.round(elem.cost/3) + "/Night";
 
     innerdiv.append(name, price);
 
@@ -129,11 +133,25 @@ document.getElementById("first").addEventListener("click", () => {
   fetchingData(page);
 });
 document.getElementById("second").addEventListener("click", () => {
-  getTrending();
+  // gettingPageNumber();
+  console.log("here")
+  query = "_sort=ratings&order=asc"
+  fetchingData(page)
 });
 document.getElementById("third").addEventListener("click", () => {
-  getPopular();
+  // gettingPageNumber();
+  query = "_sort=ratings&order=desc"
+  fetchingData(page)
 });
-document.getAnimations("fifth").addEventListener("click", () => {
-  getRecommended();
+document.getElementById("fourth").addEventListener("click", () => {
+  query = "_sort=name&order=asc"
+  fetchingData(page)
+});
+document.getElementById("five").addEventListener("click", () => {
+  query = "_sort=cost&order=asc"
+  fetchingData(page)
+});
+document.getElementById("six").addEventListener("click", () => {
+  query = "_sort=cost&order=desc"
+  fetchingData(page)
 });

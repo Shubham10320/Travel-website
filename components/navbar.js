@@ -1,7 +1,7 @@
 function navbar(){
     return `<nav>
     <div>
-        <img src="../images/logo.png" alt="">
+        <img src="../images/logo.png" alt="" href="index.html">
     </div>
     <div>
         <a href="#">Downlaod App</a>
