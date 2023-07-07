@@ -4,84 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <link rel="stylesheet" href="../styles/payment_page.css">
 </head>
-<body>
-  <div class="container">
-
-    <form action="">
-
-        <div class="row">
-
-            <div class="col">
-
-                <h3 class="title">Billing address</h3>
-
-                <div class="inputBox">
-                    <span>Full Name :</span>
-                    <input type="text" placeholder="">
-                </div>
-                <div class="inputBox">
-                    <span>email :</span>
-                    <input type="email" placeholder="">
-                </div>
-                <div class="inputBox">
-                    <span>Address :</span>
-                    <input type="text" placeholder="">
-                </div>
-                <div class="inputBox">
-                    <span>City :</span>
-                    <input type="text" placeholder="">
-                </div>
-
-                <div class="flex">
-                    <div class="inputBox">
-                        <span>State :</span>
-                        <input type="text" placeholder="">
+<body>  
+        <div class="container">         
+                <h3>BILLING ADDRESS</h3>
+                <form>
+                    Full name
+                    <input type="text" name="" placeholder="Enter name">
+                    Email
+                    <input type="text" name="" placeholder="Enter email">
+    
+                    Address
+                    <input type="text" name="" placeholder="Enter address">
+                    
+                    City
+                    <input type="text" name="" placeholder="Enter City">
+                    <div id="zip">
+                        <label>
+                            State
+                            <select>
+                                <option>Choose State..</option>
+                                <option>Assam</option>
+                                <option>Bihar</option>
+                                <option>Madhya Pradesh</option>							
+                                <option>Rajasthan</option>
+                                <option>Uttar Pradesh</option>
+                                
+                            </select>
+                        </label>
+                            <label>
+                            Zip code
+                            <input type="number" name="" placeholder="Zip code">
+                        </label>
                     </div>
-                    <div class="inputBox">
-                        <span>Zip Code :</span>
-                        <input type="text" placeholder="">
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col">
-
-                <h3 class="title">payment</h3>
-
-                <div class="inputBox">
-                    <span>Cards Accepted :</span>
-                    <img src="../images/card_img.png" alt="">
-                </div>
-                <div class="inputBox">
-                    <span>name on card :</span>
-                    <input type="text" placeholder="">
-                </div>
-                <div class="inputBox">
-                    <span>card number :</span>
-                    <input type="number" placeholder="">
-                </div>
-                <div class="inputBox">
-                    <span>exp month :</span>
-                    <input type="text" placeholder="">
-                </div>
-
-                <div class="flex">
-                    <div class="inputBox">
-                        <span>exp year :</span>
-                        <input type="number" placeholder="">
-                    </div>
-                    <div class="inputBox">
-                        <span>CVV :</span>
-                        <input type="text" placeholder="">
-                    </div>
-                </div>
-            </div>    
+                    <button id="buy-now-button">Proceed to checkout</button>
+                </form>
+            </div>          
         </div>
-        <input type="submit" value="proceed to checkout" class="submit-btn">
-    </form>
-</div>    
 </body>
 </html>
+
+<script src="../scripts/payment_page.js"></script>
