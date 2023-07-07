@@ -1,10 +1,12 @@
 //navbar setting
 import {
     navbar,
-    menuBar
+    menuBar,
+    footer
 } from '../components/navbar.js'
 import hotelInfo from '../components/hotelinfo.js';
 import priceInfo from '../components/priceInfo.js';
+document.querySelector('footer').innerHTML=footer();
 
 document.querySelector('header').innerHTML = navbar();
 document.getElementById('menuBar').innerHTML = menuBar();
@@ -127,7 +129,7 @@ window.onload = () => {
         let {
             cost
         } = data[0]
-        cost=Math.round(cost/10)
+        cost=Math.round(cost/3)
         console.log(data)
         document.querySelector(".infoDiv").innerHTML = hotelInfo(data[0])
         let date = new Date()
@@ -201,9 +203,10 @@ window.onscroll = () => {
         let viewPortHeight = window.innerHeight
         let rcontentHeight = rightBar.getBoundingClientRect().height
         let lcontentHeight = leftBar.getBoundingClientRect().height
-        if (scrollTop >= lcontentHeight - viewPortHeight - rcontentHeight) {
+        console.log(viewPortHeight,rcontentHeight,lcontentHeight,scrollTop)
+        if (scrollTop >= rcontentHeight-viewPortHeight) {
             rightBar.style.position = "fixed"
-            rightBar.style.transform = `translateY(-15em)`
+            rightBar.style.transform = `translateY(-${lcontentHeight}px)`
             // console.log("here")
         } else {
             rightBar.style.position = "absolute"
