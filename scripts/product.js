@@ -174,3 +174,7 @@ document.getElementById("six").addEventListener("click", () => {
 document.querySelector("#indexA").addEventListener("click",()=>{
   window.location.href = "index.html"
 })
+
+document.querySelector("#indexA").addEventListener("click",()=>{
+  window.location.href = "index.html"
+})
