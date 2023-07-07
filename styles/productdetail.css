@@ -70,6 +70,8 @@
     width: 63%;
     margin: auto;
     text-align: left;
+    /* height: 50vh;
+    margin-bottom: 50px; */
   }
   #discription p:first-child::first-letter {
     color: #209ee3;
@@ -82,55 +84,59 @@
   }
 
   /* ============== pay button ================ */
-  .wrapper{
-    position: fixed;
-    bottom: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  #a{
-    display: block;
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 18px;
-    font-family: sans-serif;
-    text-decoration: none;
-    color: #333;
-    border: 2px solid #333;
-    letter-spacing: 2px;
-    text-align: center;
+
+  .pg {
+    padding: 5px 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #209ee3;
+    background-color: white;
+    transition: all 1000ms;
+    font-size: 15px;
     position: relative;
-    transition: all .35s;
-  }
-  
-  #a span{
-    position: relative;
-    z-index: 2;
-  }
-  
-  #a:after{
-    position: absolute;
+    overflow: hidden;
+    outline: 2px solid #209ee3;
+}
+
+.pg:hover,
+.pg.active {
+    color: #ffffff;
+    transform: scale(1.1);
+    background-color: #268391;
+    outline: 2px solid #70bdca;
+    box-shadow: 4px 5px 17px -4px #268391;
+}
+
+.pg::before {
     content: "";
+    position: absolute;
+    left: -50px;
     top: 0;
-    left: 0;
     width: 0;
     height: 100%;
-    background: #209ee3;
-    transition: all .35s;
-  }
-  
-  #a:hover{
-    color: #fff;
-  }
-  
-  #a:hover:after{
-    width: 100%;
-  }
+    background-color: #209ee3;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+.pg:hover::before {
+    width: 250%;
+}
+#payment {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  padding: 10px;
+  margin: auto;
+  width: fit-content;
+}
   /* ========================= Media Query ====================== */
 
-  @media (max-width: 1150px) {
+  @media screen and (min-width:767px) and (max-width:1024px) {
     #container {
       width: 100%;
       margin: auto;
@@ -143,7 +149,7 @@
       padding: 10px 15px 10px 15px;
     }
   }
-  @media (max-width: 470px) {
+  @media screen and (min-width:200px) and (max-width:766px) {
     #container {
       width: 60vh;
       margin: auto;
@@ -166,10 +172,6 @@
       color: black;
       margin-left: 5px;
       margin-right: 0vh;
-    }
-    #title .share {
-      margin: auto;
-      padding: 5px 10px 5px 10px;
     }
     #images {
       display: block;
@@ -210,55 +212,4 @@
       text-align: left;
       margin-left: 10px;
     }
-  }
-
-
-  /* footer csss */
-
-  footer{
-    width: 100%;
-    background-color: #1ca0e3;
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    color: white;
-  }
-  .foot{
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-  }
-  .foot>.f1 img{
-    width: 180px;
-    display: block;
-    height: 20vh;
-  }
-  .foot>.f1 p{
-    width: 40%;
-    margin-bottom: 30px;
-    margin-left: 20px;
-  }
-  .foot>.f2{
-    width: 40%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-  }
-  .f2{
-    margin-top: 60px;
-  }
-  .foot>.f2 div p{
-    margin-top: 8px;
-  }
-  .lastHR{
-    width: 90%;
-    margin: auto;
-    border: 2px solid #1484bc;
-  }
-  .final{
-    display: flex;
-    width: 90%;
-    margin: auto;
-    justify-content: space-between;
-    padding-bottom: 20px;
   }
