@@ -81,7 +81,6 @@ function displayData(data) {
     let div = document.createElement("div");
 
     var image = document.createElement("img");
-    image.setAttribute("id", "img");
     image.setAttribute("src", elem.url);
     image.id = "image";
     image.addEventListener("click", function () {
