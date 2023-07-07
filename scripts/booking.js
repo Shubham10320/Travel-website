@@ -204,13 +204,13 @@ window.onscroll = () => {
         let rcontentHeight = rightBar.getBoundingClientRect().height
         let lcontentHeight = leftBar.getBoundingClientRect().height
         console.log(viewPortHeight,rcontentHeight,lcontentHeight,scrollTop)
-        if (scrollTop >= rcontentHeight-viewPortHeight) {
+        if (scrollTop <= rcontentHeight) {
             rightBar.style.position = "fixed"
-            rightBar.style.transform = `translateY(-${lcontentHeight}px)`
+            rightBar.style.transform = ``
             // console.log("here")
         } else {
             rightBar.style.position = "absolute"
-            rightBar.style.transform = ""
+            rightBar.style.transform = `translateY(${rcontentHeight-viewPortHeight}px)`
             // console.log("here2")
         }
         // console.log("here3")
