@@ -1,7 +1,8 @@
-import { navbar, menuBar } from "../components/navbar.js";
+import { navbar, menuBar,footer } from "../components/navbar.js";
 
 document.querySelector("header").innerHTML = navbar();
 document.getElementById("menuBar").innerHTML = menuBar();
+document.querySelector("footer").innerHTML = footer();
 
 
 
@@ -64,9 +65,9 @@ function creatingButton(totalPages) {
     btn.addEventListener("click", () => {
       fetchingData(btn.textContent);
       document.querySelectorAll(".pg").forEach((ele)=>{
-        ele.style.backgroundColor = "#fff"
+        ele.classList = "pg"
       })
-      btn.style.backgroundColor = "rgb(19, 158, 212)";
+      btn.classList = "pg active";
     });
     document.getElementById("page-list").append(btn);
   }
@@ -149,23 +150,23 @@ document.getElementById("first").addEventListener("click", () => {
 document.getElementById("second").addEventListener("click", () => {
   // gettingPageNumber();
   console.log("here")
-  query = "_sort=ratings&order=asc"
+  query = "_sort=ratings&_order=asc"
   fetchingData(page)
 });
 document.getElementById("third").addEventListener("click", () => {
   // gettingPageNumber();
-  query = "_sort=ratings&order=desc"
+  query = "_sort=ratings&_order=desc"
   fetchingData(page)
 });
 document.getElementById("fourth").addEventListener("click", () => {
-  query = "_sort=name&order=asc"
+  query = "_sort=name&_order=asc"
   fetchingData(page)
 });
 document.getElementById("five").addEventListener("click", () => {
-  query = "_sort=cost&order=asc"
+  query = "_sort=cost&_order=desc"
   fetchingData(page)
 });
 document.getElementById("six").addEventListener("click", () => {
-  query = "_sort=cost&order=desc"
+  query = "_sort=cost&_order=asc"
   fetchingData(page)
 });
