@@ -48,6 +48,7 @@ function cool_fun(arr) {
 
     let i1 = document.createElement("i");
     i1.className = "fa-solid fa-star";
+    i1.id='starPrem'
     let p2 = document.createElement("p");
 
     p2.textContent = "4.92 . 597 reviews " + ele.name;

@@ -68,9 +68,9 @@ footer{
       .foot>.f1 img{
         width: 280px;
         display: block;
-        height: 15vh;
+        height: 20vh;
         margin: auto;
-        margin-left: 28px;
+        margin-left: 70px;
       }
       .foot>.f1 p{
         width: 65%;
@@ -113,6 +113,6 @@ footer{
         margin: auto;
         justify-content: space-between;
         padding-bottom: 20px;
-        font-size: 22px;
+        font-size: 18px;
       }
   }

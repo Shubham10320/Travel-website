@@ -36,15 +36,15 @@ async function gettingPageNumber() {
     console.log(error);
   }
 }
-gettingPageNumber();
+// gettingPageNumber();
 
 let page = 1;
 let query='';
 let fetchingData = async (page) => {
   try {
-    console.log(`https://database-sr9b.onrender.com/hotels?_limit=6&_page=${page}&${query}`)
+    // console.log(`https://database-sr9b.onrender.com/hotels?_limit=6&_page=${page}&${query}`)
     let result = await fetch(
-      `https://database-sr9b.onrender.com/hotels?_limit=6&_page=${page}&${query}`
+      `https://database-sr9b.onrender.com/hotels?_limit=6&_page=${page}&_${query}`
     );
     let res = await result.json();
     displayData(res);
@@ -52,7 +52,7 @@ let fetchingData = async (page) => {
     console.log(error);
   }
 };
-// fetchingData(page);
+//  fetchingData(page);
 
 function creatingButton(totalPages) {
   document.getElementById("page-list").innerHTML = "";
@@ -110,17 +110,18 @@ function addfun(elem) {
   localStorage.setItem("id", JSON.stringify(elem));
   window.location.href = "productdetail.html";
 }
-const searchfun = () => {
-  // event.preventDefault()
-  let searchData1 = document.getElementById("searchInput").value;
-  // console.log(searchData)
-  // localStorage.setItem("value",JSON.stringify(searchData))
-  searchdata(searchData1);
-};
+// const searchfun = () => {
+//   // event.preventDefault()
+//   let searchData1 = document.getElementById("searchInput").value;
+//   // console.log(searchData)
+//   // localStorage.setItem("value",JSON.stringify(searchData))
+//   searchdata(searchData1);
+// };
 // document.getElementById("searchButton").addEventListener("click", searchfun);
 let searchdata = async (searchedData) => {
   try {
-    let link = `https://database-sr9b.onrender.com/hotels?Country=${searchedData}`;
+    // https://database-sr9b.onrender.com/hotels?_limit=6&_page=${page}&${query}
+    let link = `https://database-sr9b.onrender.com/hotels?_limit=6&_Country=${searchedData}`;
     let data = await fetch(link);
     data = await data.json();
     totalPages = data.length / 6;
@@ -132,13 +133,14 @@ let searchdata = async (searchedData) => {
 };
 // let searchedData=JSON.parse(localStorage.getItem('searchData')) || '';
 let searchedData
-if(JSON.parse(localStorage.getItem('searchData'))){
-  searchedData=JSON.parse(localStorage.getItem('searchData'))
-  console.log(searchedData)
-   searchdata(searchedData)
+if(localStorage.getItem('searchData')==='' || !localStorage.getItem('searchData')){
+  console.log('hiii')
+  fetchingData(page);
+  gettingPageNumber();
 }else{
-    fetchingData(page);
-    gettingPageNumber();
+    searchedData=localStorage.getItem('searchData')
+  console.log(searchedData)
+  searchdata(searchedData)
 }
 
 
@@ -148,7 +150,7 @@ document.getElementById("first").addEventListener("click", () => {
 });
 document.getElementById("second").addEventListener("click", () => {
   // gettingPageNumber();
-  console.log("here")
+  // console.log("here")
   query = "_sort=ratings&_order=asc"
   fetchingData(page)
 });
@@ -169,3 +171,5 @@ document.getElementById("six").addEventListener("click", () => {
   query = "_sort=cost&_order=asc"
   fetchingData(page)
 });
+
+
