@@ -209,7 +209,7 @@ window.onscroll = () => {
         if (scrollTop >= viewPortHeight) {
             console.log("here")
             rightBar.style.position = "fixed"
-            rightBar.style.transform = `translateY(-40em)`
+            rightBar.style.transform = `translateY(-45em)`
             // console.log("here")
         } else {
             rightBar.style.transform = ``
@@ -267,8 +267,17 @@ document.querySelector("#checkoutdate").addEventListener("change",(e)=>{
     }
 })
 document.querySelector("#goToPay").addEventListener("click",()=>{
-    localStorage.setItem("finalPrice",)
-})
-document.querySelector("#indexA").addEventListener("click",()=>{
-    window.location.href = "index.html"
+    // localStorage.setItem("finalPrice",)
+    document.querySelector("#indexA").addEventListener("click",()=>{
+        window.location.href = "index.html"
+    })
+    let div = document.createElement("div")
+    div.classList = "lds-dual-ring"
+    document.querySelector("#main-b").style.opacity = "0.3"
+    document.querySelector("header").style.opacity = "0.3"
+    document.querySelector("footer").style.opacity = "0.3"
+    document.querySelector("body").append(div)
+    setTimeout(()=>{
+        window.location.href = "payment_page.html"
+    },3000)
 })
