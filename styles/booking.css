@@ -415,7 +415,7 @@ nav{
     flex-direction: row;
 }
 /*submit button */
-#main-b>div>button {
+#main-b>div>input[type="submit"] {
     width: 70%;
     color: white;
     background-color: #1ca0e3;
