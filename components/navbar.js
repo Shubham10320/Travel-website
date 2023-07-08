@@ -1,10 +1,10 @@
-/*function navbar(){
+function navbar(){
     return `<nav>
     <div>
         <a href="index.html"><img src="../images/logo.png" alt="" id="indexA"></a>
     </div>
     <div>
-        <a href="product.html">Hotels</a>
+        <a href="product.html">Travelling Places</a>
         <a href="#">Partner With Us</a>
         <a href="#">Downlaod App</a>
         <a href="#">Installment</a>
@@ -12,7 +12,7 @@
     </div>
     <div id="last">
         <ion-icon name="person-circle-outline"></ion-icon>
-        <a href="#">Register</a>
+        <a href="signup.html">Register</a>
     </div>
 
     <div>
@@ -21,7 +21,7 @@
 
 </nav>`
 }
-*/
+
 function navbar() {
     const loggedInUser = localStorage.getItem('userLogged');
    // console.log(loggedInUser.email)
@@ -29,39 +29,17 @@ function navbar() {
 
     const userName = loggedInUser ? loggedInUser : 'Register';
   
-    return `<nav>
-      <div>
-        <img src="../images/logo.png" alt="" id="indexA">
-      </div>
-      <div>
-        <a href="product.html">Hotels</a>
-        <a href="#">Partner With Us</a>
-        <a href="#">Download App</a>
-        <a href="#">Installment</a>
-        <a href="booking.html">My Booking</a>
-      </div>
-      <div id="last">
-        <ion-icon name="person-circle-outline"></ion-icon>
-        <a href="#">${userName}</a>
-      </div>
-  
-      <div>
-        <p id="menu"><ion-icon name="menu-outline"></ion-icon></p>
-      </div>
-    </nav>`;
-  }
-  
-  
+}
 
 function menuBar(){
     return `<div>
     <p id="close"><ion-icon name="close-circle-outline"></ion-icon></p>
+    <a href="product.html">Travelling Places</a>
     <a href="#">Downlaod App</a>
     <a href="#">Partner With Us</a>
     <a href="#">Installment</a>
-    <a href="#">Saved</a>
-    <a href="#">My Booking</a>
-    <a href="#"><ion-icon name="person-circle-outline"></ion-icon>Register</a>
+    <a href="booking.html">My Booking</a>
+    <a href="signup.html"><ion-icon name="person-circle-outline"></ion-icon>Register</a>
 </div>`
 }
 
