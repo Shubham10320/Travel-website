@@ -78,7 +78,7 @@ setStates()
 let peronDetail = () => {
     return `<div class="person"><div>
     Title
-    <select id="gender">
+    <select id="gender" required>
         <option value="Mr">Mr</option>
         <option value="Mrs">Mrs</option>
         <option value="Miss">Miss</option>
@@ -86,16 +86,18 @@ let peronDetail = () => {
 </div>
 <div>
     First Name
-    <input type="text" placeholder="Enter First Name">
+    <input type="text" placeholder="Enter First Name" required>
 </div>
 <div>
     Last Name
-    <input type="text" placeholder="Enter Last Name">
+    <input type="text" placeholder="Enter Last Name" required>
 </div></div>`
 }
 document.querySelector(".persons").innerHTML = peronDetail()
 document.querySelector("#add-guest").addEventListener("click", () => {
     document.querySelector(".persons").innerHTML += peronDetail()
+    pageObj.person++
+    document.querySelector("#numguest").value = pageObj.person
 })
 
 //setting price summary
@@ -201,6 +203,7 @@ let leftBar = document.querySelector(".left-div")
 window.onscroll = () => {
     let scrollTop = window.scrollY
     let w = window.innerWidth
+    console.log(w)
     if (w > 800) {
         let viewPortHeight = window.innerHeight
         let rcontentHeight = rightBar.getBoundingClientRect().height
@@ -269,8 +272,9 @@ document.querySelector("#checkoutdate").addEventListener("change",(e)=>{
 document.querySelector("#indexA").addEventListener("click",()=>{
     window.location.href = "index.html"
 })
-document.querySelector("#goToPay").addEventListener("click",()=>{
+document.querySelector("form").addEventListener("submit",(e)=>{
     // localStorage.setItem("finalPrice",)
+    e.preventDefault()
     let div = document.createElement("div")
     div.classList = "lds-dual-ring"
     document.querySelector("#main-b").style.opacity = "0.3"

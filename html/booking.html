@@ -19,7 +19,7 @@
         <!-- Importing navbar -->
     </div>
     <div id="back-ground"></div>
-    <div id="main-b">
+    <form id="main-b">
         <div class="left-div">
             <div>
                 <div class="h2div active">
@@ -98,13 +98,13 @@
                             <span style="font-size: 13px;">(Your booking voucher will be sent to this email
                                 address)</span>
                         </div>
-                        <input type="text" placeholder="Enter Email Address">
+                        <input type="text" placeholder="Enter Email Address" id="emailForm" required>
                     </div>
                     <div class="mobile">
                         Mobile Number
                         <div>
                             <div>+91</div>
-                            <input type="text" placeholder="Enter Phone Number">
+                            <input type="text" placeholder="Enter Phone Number" required>
                         </div>
                     </div>
                     <hr style="width: 100%;margin: 0;">
@@ -127,9 +127,9 @@
                 </div>
                 <div class="content collapse show gst">
                     <div>
-                        <input type="text" placeholder="Enter billing address">
-                        <input type="text" placeholder="Enter Pincode">
-                        <select id="state-select">
+                        <input type="text" placeholder="Enter billing address" required>
+                        <input type="text" placeholder="Enter Pincode" required>
+                        <select id="state-select" required>
                             <option value="">--Select State--</option>
                         </select>
                     </div>
@@ -182,8 +182,8 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn-info btn-lg" id="goToPay">Proceed to payment</button>
-            <sub style="margin-bottom: 10px;">By proceeding, I agree to Alcazar's Privacy Policy, User Agreement & Terms of Service</sub>
+            <input class="btn btn-info btn-lg" id="goToPay" type="submit" value="Proceed to payment">
+            <sub style="margin-bottom: 10px;line-height: 1em;text-align: center;">By proceeding, I agree to Alcazar's Privacy Policy, User Agreement & Terms of Service</sub>
         </div>
         <div class="right-div">
             <div>
@@ -237,7 +237,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </form>
     <footer>
     
     </footer>
