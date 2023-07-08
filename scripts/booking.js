@@ -241,7 +241,10 @@ document.querySelector("#numguest").addEventListener("change",(e)=>{
     // setPriceSum()
     pageObj.person = e.target.value
     let person = e.target.value
-    let str = String(peronDetail()+peronDetail()+peronDetail())
+    let str;
+    for(let x=0; x<person; x++){
+        str+=peronDetail()
+    }
     document.querySelector(".persons").innerHTML = str
     setPriceSum()
 })
