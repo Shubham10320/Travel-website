@@ -1,4 +1,9 @@
 function navbar(){
+    const loggedInUser = localStorage.getItem('userLogged');
+   // console.log(loggedInUser.email)
+    console.log(loggedInUser)
+
+    const userName = loggedInUser ? loggedInUser : 'Register';
     return `<nav>
     <div>
         <a href="index.html"><img src="../images/logo.png" alt="" id="indexA"></a>
@@ -12,7 +17,7 @@ function navbar(){
     </div>
     <div id="last">
         <ion-icon name="person-circle-outline"></ion-icon>
-        <a href="signup.html">Register</a>
+        <a href="signin.html">${userName}</a>
     </div>
 
     <div>
@@ -20,15 +25,6 @@ function navbar(){
     </div>
 
 </nav>`
-}
-
-function navbar() {
-    const loggedInUser = localStorage.getItem('userLogged');
-   // console.log(loggedInUser.email)
-    console.log(loggedInUser)
-
-    const userName = loggedInUser ? loggedInUser : 'Register';
-  
 }
 
 function menuBar(){

@@ -33,11 +33,19 @@ document.getElementById('searchThat').addEventListener('click',()=>{
 document.getElementById('closeIcon').addEventListener('click', ()=>{
     document.querySelector('.pop').style.display='none';
 })
-let popup=document.querySelector('#last a')
-popup.addEventListener('click', ()=>{
+
+document.querySelector('#last a').addEventListener('click', (event)=>{
+    event.preventDefault()
+    document.querySelector('.pop').style.display='block';
+
     if(popup.textContent=='Register'){
         document.querySelector('.pop').style.display='none';
+        window.location.href = "register.html"
     }else{
         document.querySelector('.pop').style.display='block';
     }
 })
+document.querySelector("#closeIcon").addEventListener("click",()=>{
+    console.log("here")
+})
+
