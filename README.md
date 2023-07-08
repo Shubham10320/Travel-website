@@ -7,6 +7,23 @@ The development of this application is being carried out by the following team m
 
 Deployed Link:https://alcazartravelling.netlify.app/
 
+Project Flow : -
+
+Login Page 
+![Screenshot 2023-07-08 174400](https://github.com/Shubham10320/Travel-website/assets/68837552/c6db66fb-89fe-465d-b3dc-cd4f2ae1a211)
+
+Home Page
+![Screenshot 2023-07-08 174109](https://github.com/Shubham10320/Travel-website/assets/68837552/121e5c3a-76b0-41a0-bbb2-e10bb60dd07f)
+
+Explore Page 
+![Screenshot 2023-07-08 174159](https://github.com/Shubham10320/Travel-website/assets/68837552/59c5bd5d-08ec-426e-ab2b-d8033c4238be)
+
+Booking Page
+![Screenshot 2023-07-08 174256](https://github.com/Shubham10320/Travel-website/assets/68837552/1f5898c9-45e0-442d-870b-af658ae181c3)
+
+
+
+
 
 Team Lead: Shubham Chaubey
 Task: Home Page and CSS of login and signup
