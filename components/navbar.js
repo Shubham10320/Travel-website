@@ -1,4 +1,4 @@
-function navbar(){
+/*function navbar(){
     return `<nav>
     <div>
         <img src="../images/logo.png" alt="" id="indexA">
@@ -21,6 +21,37 @@ function navbar(){
 
 </nav>`
 }
+*/
+function navbar() {
+    const loggedInUser = JSON.parse(localStorage.getItem('users'));
+   // console.log(loggedInUser.email)
+    console.log(loggedInUser)
+
+    const userName = loggedInUser ? "Shubham" : 'Register';
+  
+    return `<nav>
+      <div>
+        <img src="../images/logo.png" alt="" id="indexA">
+      </div>
+      <div>
+        <a href="product.html">Hotels</a>
+        <a href="#">Partner With Us</a>
+        <a href="#">Download App</a>
+        <a href="#">Installment</a>
+        <a href="booking.html">My Booking</a>
+      </div>
+      <div id="last">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <a href="#">${userName}</a>
+      </div>
+  
+      <div>
+        <p id="menu"><ion-icon name="menu-outline"></ion-icon></p>
+      </div>
+    </nav>`;
+  }
+  
+  
 
 function menuBar(){
     return `<div>
