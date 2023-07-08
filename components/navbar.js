@@ -17,7 +17,7 @@ function navbar(){
     </div>
     <div id="last">
         <ion-icon name="person-circle-outline"></ion-icon>
-        <a href="signin.html">${userName}</a>
+        <a href="signup.html">${userName}</a>
     </div>
 
     <div>
@@ -26,6 +26,8 @@ function navbar(){
 
 </nav>`
 }
+
+
 
 function menuBar(){
     return `<div>
