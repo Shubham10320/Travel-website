@@ -236,8 +236,12 @@ document.querySelector("#addins").addEventListener("click", () => {
 //guest selection
 document.querySelector("#numguest").addEventListener("change",(e)=>{
     pageObj.person = e.target.value
-    if(e.target.value)
-    document.querySelector(".persons").innerHTML += peronDetail()
+    let person = e.target.value
+    let str;
+    for(let x=0; x<person; x++){
+        str+=peronDetail()
+    }
+    document.querySelector(".persons").innerHTML = str
     setPriceSum()
 })
 document.querySelector("#numroom").addEventListener("change",(e)=>{
