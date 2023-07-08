@@ -28,7 +28,7 @@ const app = initializeApp(firebaseConfig);
 console.log(app);
 const auth = getAuth();
 
-document.getElementById("login").addEventListener("click", () => {
+document.querySelector("form").addEventListener("submit", () => {
     event.preventDefault()
     let email = document.getElementById("loginUsername").value;
     let password = document.getElementById("loginPassword").value;
@@ -37,14 +37,23 @@ document.getElementById("login").addEventListener("click", () => {
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            alert("login successfully!");
-            document.getElementById("logout").style.display = "block";
+            if (user !== null) {
+                // The user object has basic properties such as display name, email, etc.
+                alert("Signed in "+user.displayName);
+                localStorage.setItem("userLogged",user.displayName)
+                window.location.href = "index.html"
+                // The user's ID, unique to the Firebase project. Do NOT use
+                // this value to authenticate with your backend server, if
+                // you have one. Use User.getToken() instead.
+                const uid = user.uid;
+              }
+            // document.getElementById("logout").style.display = "block";
             // ...
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.log(errorMessage);
+            // console.log(errorMessage);
             alert("Invalid Credentials");
         });
 });
@@ -61,19 +70,19 @@ document.getElementById("login").addEventListener("click", () => {
 //             // An error happened.
 //         });
 // });
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const username = document.getElementById('loginUsername').value;
-  const password = document.getElementById('loginPassword').value;
+// document.getElementById('loginForm').addEventListener('submit', function(e) {
+//   e.preventDefault();
+//   const username = document.getElementById('loginUsername').value;
+//   const password = document.getElementById('loginPassword').value;
   
   // Perform login validation
-  if (username.length < 6 || password.length < 8) {
-    alert('Username should be at least 6 characters long and password should be at least 8 characters long.');
-    return;
-  }
+//   if (username.length < 6 || password.length < 8) {
+//     alert('Username should be at least 6 characters long and password should be at least 8 characters long.');
+//     return;
+//   }
   
   // Retrieve existing users from localStorage
-  const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+//   const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
 
 //   // Check if the user already exists and the password matches
 //   const existingUser = storedUsers.find(user => user.username === username && user.password === password);
@@ -85,10 +94,10 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 //   }
   
   // Reset the form
-  document.getElementById('loginForm').reset();
+//   document.getElementById('loginForm').reset();
 
   
 
-});
+// });
 
 

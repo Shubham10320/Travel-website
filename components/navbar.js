@@ -23,11 +23,11 @@
 }
 */
 function navbar() {
-    const loggedInUser = JSON.parse(localStorage.getItem('users'));
+    const loggedInUser = localStorage.getItem('userLogged');
    // console.log(loggedInUser.email)
     console.log(loggedInUser)
 
-    const userName = loggedInUser ? "Shubham" : 'Register';
+    const userName = loggedInUser ? loggedInUser : 'Register';
   
     return `<nav>
       <div>
