@@ -39,7 +39,13 @@ document.querySelector("form").addEventListener("submit", () => {
             const user = userCredential.user;
             if (user !== null) {
                 // The user object has basic properties such as display name, email, etc.
-                alert("Signed in "+user.displayName);
+                // alert("Signed in "+user.displayName);
+                document.querySelector('.poplogout').style.display='block'
+                document.getElementById('logoutAlert').textContent=`You have Signed in as ${user.displayName}`
+                setTimeout(()=>{
+                  document.querySelector('.poplogout').style.display='none'
+                },3000)
+
                 localStorage.setItem("userLogged",user.displayName)
                 window.location.href = "index.html"
                 // The user's ID, unique to the Firebase project. Do NOT use

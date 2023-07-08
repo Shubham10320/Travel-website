@@ -43,7 +43,12 @@
               const user = userCredential.user;
               console.log(user)
               
-              alert("registered")
+              // alert("registered")
+              document.querySelector('.poplogout').style.display='block'
+              setTimeout(()=>{
+                document.querySelector('.poplogout').style.display='none'
+              },3000)
+
               updateProfile(auth.currentUser, {
                 displayName: username, photoURL: "https://example.com/jane-q-user/profile.jpg"
               }).then(() => {
