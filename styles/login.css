@@ -16,7 +16,7 @@ body {
   align-items: center;
   height: 99.9vh;
   width: 100%;
-  background-color: rgba(122, 198, 253, 0.674);
+  background-color: rgba(129, 200, 250, 0.674);
   
 }
 
@@ -26,12 +26,18 @@ body {
   align-items: center;
   width: 300px;
   padding: 20px;
-  border: 2px solid #ccc;
+  border: 4px solid #ccc;
   border-radius: 5px;
   height: 50vh;
-  background-color: rgba(98, 163, 239, 0.605);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgba(77, 128, 186, 0.703);
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   /* box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
+}
+.form h2{
+  margin-top: 30px;
+  margin-bottom:40px;
+  color: rgb(2, 52, 101);
+  font-size: 30px;
 }
 
 input[type="text"],
@@ -43,17 +49,48 @@ input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
+input{
+    outline: none;
+}
 button {
   padding: 10px 20px;
   background-color: #4CAF50;
   color: white;
   border: none;
   cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
-
+.form>p{
+  font-weight: bold;
+  color: rgb(2, 52, 101);
+}
+.form>p a{
+   color: crimson;
+   text-decoration: none;
+   font-weight: bold;
+}
 button:hover {
   background-color: #45a049;
 }
+.form>p{
+  margin-bottom: 10px;
+}
+.social-login p{
+  font-weight: bold;
+  color: rgb(2, 52, 101);
+}
 
-  
+.social-login a{
+  font-size: 25px;
+}
+.social-login #googleicon{
+ color: crimson;
+}
+.social-login #appleicon{
+  color: white;
+ }
+ .social-login #facebookicon{
+  color: blue;
+ }

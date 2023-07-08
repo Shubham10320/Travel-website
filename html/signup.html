@@ -4,21 +4,29 @@
   <title>Sign Up Page</title>
   <style>
 
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
+  width: 99.5%;
+  height: 98vh;
   background-image: url("../images/background\ image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
- 
 }
-    .container {
+
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.8);
+  height: 99.9vh;
+  width: 100%;
+  background-color: rgba(129, 200, 250, 0.674);
+  
 }
 
-.form {
+/* .form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,8 +34,26 @@ body {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+} */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 330px;
+  padding: 20px;
+  border: 4px solid #ccc;
+  border-radius: 5px;
+  height: 50vh;
+  background-color: rgba(77, 128, 186, 0.703);
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  /* box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
 }
-
+.form h2{
+  margin-top: 30px;
+  margin-bottom:30px;
+  color: rgb(2, 52, 101);
+  font-size: 30px;
+}
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -37,18 +63,55 @@ input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+input{
+    outline: none;
+}
 
-button {
+/* button {
   padding: 10px 20px;
   background-color: #4CAF50;
   color: white;
   border: none;
   cursor: pointer;
+} */
+button {
+  padding: 10px 20px;
+  background-color: #4db550;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
-
 button:hover {
   background-color: #45a049;
 }
+.form>p{
+  margin-bottom: 10px;
+}
+.form>p a{
+   color: crimson;
+   text-decoration: none;
+   font-weight: bold;
+}
+.social-login p{
+  font-weight: bold;
+  color: rgb(2, 52, 101);
+}
+
+.social-login a{
+  font-size: 25px;
+}
+.social-login #googleicon{
+ color: crimson;
+}
+.social-login #appleicon{
+  color: white;
+ }
+ .social-login #facebookicon{
+  color: blue;
+ }
 
   </style>
 </head>
@@ -58,19 +121,21 @@ button:hover {
       <h2>Sign Up</h2>
       <input type="text" placeholder="Username" id="signupUsername" required>
       <input type="email" placeholder="Email" id="signupEmail" required>
-      <input type="password" placeholder="Password" id="signupPassword" required>
+      <input type="password" maxlength="8" placeholder="Password" id="signupPassword" required>
       <button type="submit" id="signin">Sign Up</button>
       <p>Already have an account? <a href="login.html">Login</a></p>
 
       <div class="social-login">
-        <p>Login with:</p>
-        
-        <a href="#"><i class="fab fa-apple"></i> Apple</a>
-        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+        <p>Signup with:</p>
+        <a href="#" id="googleicon"><ion-icon name="logo-google"></ion-icon></a>
+            <a href="#" id="facebookicon"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#" id="appleicon"><ion-icon name="logo-apple"></ion-icon></a>
       </div>
     </form>
-    <button id="google">Google</button>
   </div>
   <script src="../scripts/signup.js" type="module"></script>
 </body>
 </html>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
