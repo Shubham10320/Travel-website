@@ -112,10 +112,37 @@ button:hover {
  .social-login #facebookicon{
   color: blue;
  }
+ .poplogout{
+  position: relative;
+  display: none;
+}
+.poplogout>.popuplogout{
+  position: fixed;
+  width: 18rem;
+  top: 12%;
+  left: 40%;
+  background-color: rgb(45, 43, 43);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
 
   </style>
 </head>
 <body>
+
+  <div class="poplogout">
+    <div class="popuplogout">
+        <p id="logoutAlert">You have successfully logged In....</p>
+    </div>
+</div>
+
+
   <div class="container">
     <form id="signupForm" class="form">
       <h2>Sign Up</h2>

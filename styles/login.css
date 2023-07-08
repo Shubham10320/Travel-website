@@ -19,7 +19,25 @@ body {
   background-color: rgba(129, 200, 250, 0.674);
   
 }
-
+.poplogout{
+  position: relative;
+  display: none;
+}
+.poplogout>.popuplogout{
+  position: fixed;
+  width: 18rem;
+  top: 12%;
+  left: 40%;
+  background-color: rgb(45, 43, 43);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
 .form {
   display: flex;
   flex-direction: column;

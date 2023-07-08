@@ -84,7 +84,12 @@ document.getElementById("logout").addEventListener("click", () => {
         .then(() => {
             // Sign-out successful.
         localStorage.removeItem('userLogged');
-        location.reload()
+        document.querySelector('.poplogout').style.display='block'
+        setTimeout(()=>{
+            
+            location.reload()
+        },3000)
+        
         
         })
         .catch((error) => {
