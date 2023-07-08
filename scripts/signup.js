@@ -63,14 +63,19 @@
     
   })
   const provider = new GoogleAuthProvider()
-document.querySelector("#google").addEventListener("click",()=>{
+document.querySelector("#googleicon").addEventListener("click",(event)=>{
+  event.preventDefault()
     signInWithPopup(auth, provider)
   .then((result) => {
     // This gives you a Google Access Token. You can use it to access the Google API.
     const credential = GoogleAuthProvider.credentialFromResult(result);
     const token = credential.accessToken;
     // The signed-in user info.
+
     const user = result.user;
+    console.log(user)
+    localStorage.setItem("userLogged",user.displayName)
+    window.location.href = "index.html"
     // IdP data available using getAdditionalUserInfo(result)
     // ...
   }).catch((error) => {
