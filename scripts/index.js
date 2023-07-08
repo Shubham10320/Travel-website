@@ -30,3 +30,14 @@ document.getElementById('searchThat').addEventListener('click',()=>{
 })
 
 
+document.getElementById('closeIcon').addEventListener('click', ()=>{
+    document.querySelector('.pop').style.display='none';
+})
+let popup=document.querySelector('#last a')
+popup.addEventListener('click', ()=>{
+    if(popup.textContent=='Register'){
+        document.querySelector('.pop').style.display='none';
+    }else{
+        document.querySelector('.pop').style.display='block';
+    }
+})
