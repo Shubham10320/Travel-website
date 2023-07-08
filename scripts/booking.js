@@ -266,11 +266,11 @@ document.querySelector("#checkoutdate").addEventListener("change",(e)=>{
         }
     }
 })
+document.querySelector("#indexA").addEventListener("click",()=>{
+    window.location.href = "index.html"
+})
 document.querySelector("#goToPay").addEventListener("click",()=>{
     // localStorage.setItem("finalPrice",)
-    document.querySelector("#indexA").addEventListener("click",()=>{
-        window.location.href = "index.html"
-    })
     let div = document.createElement("div")
     div.classList = "lds-dual-ring"
     document.querySelector("#main-b").style.opacity = "0.3"

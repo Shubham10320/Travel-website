@@ -298,6 +298,7 @@ let searchdata = async (searchedData) => {
     let data = await fetch(link);
     data = await data.json();
     totalPages = data.length / 6;
+    console.log(data)
     displayData(data);
     creatingButton(totalPages);
   } catch (err) {
@@ -343,4 +344,3 @@ document.getElementById("six").addEventListener("click", () => {
   query = "_sort=cost&_order=asc"
   fetchingData(page)
 });
-

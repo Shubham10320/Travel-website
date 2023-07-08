@@ -99,3 +99,6 @@ function navTobooking(hotel){
   localStorage.setItem('hotel-book',JSON.stringify(newarr));
   location.href = "booking.html"
 }
+document.querySelector("#indexA").addEventListener("click",()=>{
+  window.location.href = "index.html"
+})
