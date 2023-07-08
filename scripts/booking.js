@@ -182,8 +182,9 @@ document.querySelectorAll(".offerDiv>div").forEach((ele, idx) => ele.addEventLis
     document.querySelectorAll("#radio-offer")[idx].checked = true
     document.querySelectorAll(".offerDiv>div").forEach((elem) => elem.classList = "")
     ele.classList = "active"
+    let prom = document.querySelectorAll("#radio-offer")[idx].value
     pageObj.promo = document.querySelectorAll("#radio-offer")[idx].value
-    pageObj.disc = 25
+    pageObj.disc = prom === "First Hotel" ? 35 : ""
     console.log(document.querySelectorAll("#radio-offer")[idx].disc)
     setPriceSum()
 }))
