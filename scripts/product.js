@@ -36,15 +36,15 @@ async function gettingPageNumber() {
     console.log(error);
   }
 }
-// gettingPageNumber();
+gettingPageNumber();
 
 let page = 1;
 let query='';
 let fetchingData = async (page) => {
   try {
-    // console.log(`https://database-sr9b.onrender.com/hotels?_limit=6&_page=${page}&${query}`)
+    console.log(`https://database-sr9b.onrender.com/hotels?_limit=6&_page=${page}&${query}`)
     let result = await fetch(
-      `https://database-sr9b.onrender.com/hotels?_limit=6&_page=${page}&_${query}`
+      `https://database-sr9b.onrender.com/hotels?_limit=6&_page=${page}&${query}`
     );
     let res = await result.json();
     displayData(res);
@@ -52,7 +52,7 @@ let fetchingData = async (page) => {
     console.log(error);
   }
 };
-//  fetchingData(page);
+// fetchingData(page);
 
 function creatingButton(totalPages) {
   document.getElementById("page-list").innerHTML = "";
@@ -110,27 +110,20 @@ function addfun(elem) {
   localStorage.setItem("id", JSON.stringify(elem));
   window.location.href = "productdetail.html";
 }
-// const searchfun = () => {
-//   // event.preventDefault()
-//   let searchData1 = document.getElementById("searchInput").value;
-//   // console.log(searchData)
-//   // localStorage.setItem("value",JSON.stringify(searchData))
-//   searchdata(searchData1);
-// };
+const searchfun = () => {
+  // event.preventDefault()
+  let searchData1 = document.getElementById("searchInput").value;
+  // console.log(searchData)
+  // localStorage.setItem("value",JSON.stringify(searchData))
+  searchdata(searchData1);
+};
 // document.getElementById("searchButton").addEventListener("click", searchfun);
 let searchdata = async (searchedData) => {
   try {
-<<<<<<< HEAD
     let link = `https://database-sr9b.onrender.com/hotels?Country_like=${searchedData}`;
     let response = await fetch(link);
     let data = await response.json();
     console.log(response)
-=======
-    // https://database-sr9b.onrender.com/hotels?_limit=6&_page=${page}&${query}
-    let link = `https://database-sr9b.onrender.com/hotels?_limit=6&_Country=${searchedData}`;
-    let data = await fetch(link);
-    data = await data.json();
->>>>>>> 673ab5cb8053dc762c7cb784e5eca2b4001a77e5
     totalPages = data.length / 6;
     console.log(data)
     displayData(data);
@@ -140,23 +133,14 @@ let searchdata = async (searchedData) => {
   }
 };
 // let searchedData=JSON.parse(localStorage.getItem('searchData')) || '';
-<<<<<<< HEAD
 let searchedData = JSON.parse(localStorage.getItem('searchData'))
 if(searchedData!==""){
   searchedData = searchedData.trim()
   console.log(searchedData)
    searchdata(searchedData)
-=======
-let searchedData
-if(localStorage.getItem('searchData')==='' || !localStorage.getItem('searchData')){
-  console.log('hiii')
-  fetchingData(page);
-  gettingPageNumber();
->>>>>>> 673ab5cb8053dc762c7cb784e5eca2b4001a77e5
 }else{
-    searchedData=localStorage.getItem('searchData')
-  console.log(searchedData)
-  searchdata(searchedData)
+    fetchingData(page);
+    gettingPageNumber();
 }
 
 
@@ -166,7 +150,7 @@ document.getElementById("first").addEventListener("click", () => {
 });
 document.getElementById("second").addEventListener("click", () => {
   // gettingPageNumber();
-  // console.log("here")
+  console.log("here")
   query = "_sort=ratings&_order=asc"
   fetchingData(page)
 });
@@ -187,15 +171,6 @@ document.getElementById("six").addEventListener("click", () => {
   query = "_sort=cost&_order=asc"
   fetchingData(page)
 });
-<<<<<<< HEAD
 document.querySelector("#indexA").addEventListener("click",()=>{
   window.location.href = "index.html"
 })
-
-document.querySelector("#indexA").addEventListener("click",()=>{
-  window.location.href = "index.html"
-})
-=======
-
-
->>>>>>> 673ab5cb8053dc762c7cb784e5eca2b4001a77e5
