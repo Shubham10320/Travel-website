@@ -294,7 +294,7 @@ const searchfun = () => {
 // document.getElementById("searchButton").addEventListener("click", searchfun);
 let searchdata = async (searchedData) => {
   try {
-    let link = `https://database-sr9b.onrender.com/hotels?Country=${searchedData}`;
+    let link = `https://database-sr9b.onrender.com/hotels?Country_like=${searchedData}`;
     let data = await fetch(link);
     data = await data.json();
     totalPages = data.length / 6;
@@ -344,3 +344,6 @@ document.getElementById("six").addEventListener("click", () => {
   query = "_sort=cost&_order=asc"
   fetchingData(page)
 });
+document.querySelector("#indexA").addEventListener("click",()=>{
+  window.location.href = "index.html"
+})
