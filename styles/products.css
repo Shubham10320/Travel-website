@@ -279,6 +279,7 @@ img:hover {
     display: flex;
     justify-content: center;
     gap: 3em;
+    overflow: hidden;
     border: 2px solid black;
     outline: 2px solid black;
     outline-offset: 5px;
@@ -346,6 +347,11 @@ img:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+  #page-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* height: 10em; */
+  }
     
 }
 
@@ -372,6 +378,11 @@ img:hover {
     #heading1{
         font-size: 1.8rem;
     }
+    #page-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* height: 10em; */
+      }
 }
 
 /* #location {
