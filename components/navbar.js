@@ -1,7 +1,7 @@
 function navbar(){
     return `<nav>
     <div>
-        <img src="../images/logo.png" alt="" id="indexA">
+        <a href="index.html"><img src="../images/logo.png" alt="" id="indexA"></a>
     </div>
     <div>
         <a href="product.html">Hotels</a>
