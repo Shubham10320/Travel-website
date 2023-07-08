@@ -8,7 +8,33 @@ body {
     background-repeat: no-repeat;
     /* -webkit-filter: blur(8px); */
 }
-
+.pop{
+  position: relative;
+  display: none;
+}
+.popup{
+  border: 3px solid #1ca0e3;
+  padding: 10px;
+  position: fixed;
+  right: 4%;
+  top: 9.5%;
+  background-color: rgba(255, 255, 255, 0.308);
+}
+.popup p{
+  text-align: end;
+  font-size: 22px;
+  color: crimson;
+  font-weight: bold;
+  
+}
+.popup button{
+  width: 10rem;
+  padding: 8px;
+  background-color: #1ca0e3;
+  color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+}
 #hero {
     width: 70%;
     margin: auto;
